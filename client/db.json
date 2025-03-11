@@ -1,0 +1,44 @@
+{
+  "cuisines": [
+    {
+      "id": "1",
+      "name": "American"
+    },
+    {
+      "id": "2",
+      "name": "Mexican"
+    },
+    {
+      "id": "3",
+      "name": "Italian"
+    },
+    {
+      "id": "4",
+      "name": "Thai"
+    },
+    {
+      "id": "5",
+      "name": "French"
+    },
+    {
+      "id": "6",
+      "name": "Turkish"
+    },
+    {
+      "id": "7",
+      "name": "Brazilian"
+    },
+    {
+      "id": "8",
+      "name": "Korean"
+    },
+    {
+      "id": "9",
+      "name": "Greek"
+    },
+    {
+      "id": "10",
+      "name": "Japanese"
+    }
+  ]
+}
