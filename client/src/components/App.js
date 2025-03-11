@@ -1,8 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { Switch, Route } from "react-router-dom";
+import React from "react";
+// import { Routes, Route } from "react-router-dom";
+import Navbar from "./Navbar";
+import Cuisine from "./Cuisine"
 
 function App() {
-  return <h1>Project Client</h1>;
+  return (
+    <div>
+      <Navbar/> 
+      <main>
+        <Cuisine/>
+      </main>   
+    </div>
+  )
 }
 
 export default App;
