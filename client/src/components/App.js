@@ -5,6 +5,7 @@ import Home from "./Home";
 import Cuisine from "./Cuisine"
 import Create from "./Create";
 import "../stylesheets/app.css"
+import Restaurants from "./Restaurants";
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
   useEffect(() => {
     fetch('/cuisines')
     .then(cus => cus.json())
-    .then(data => setCuisines(data))
+    .then(setCuisines)
   }, []);
 
   return (
@@ -22,7 +23,8 @@ function App() {
       <Routes>
         <Route path="/" element={ <Home cuisines={cuisines}/>}/>
         <Route path="/cuisine" element={ <Cuisine />}/>
-        <Route path="/cuisine/:id" element={ <Create />}/>
+        <Route exact path="/cuisine/:id" element={ <Create />}/>
+        <Route path="/restaurants" element={ <Restaurants />}/>
       </Routes>      
     </div>
   )
