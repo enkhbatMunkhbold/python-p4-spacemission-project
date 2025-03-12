@@ -13,7 +13,8 @@ class User(db.Model, SerializerMixin):
   _password_hash = db.Column(db.String)
 
   restaurants = db.relationship('Restaurant', back_populates = 'user')
-  cuisines = association_proxy()
+  cuisines = association_proxy('restaurants', 'cuisine')
+  serialize_rules = ('-restaurants.user',)
 
   @hybrid_property
   def password_hash(self):
@@ -27,6 +28,7 @@ class User(db.Model, SerializerMixin):
   def authenticate(self, password):
       return bcrypt.check_password_hash(
           self._password_hash, password.encode('utf-8'))
+  
   def __repr__(self):
       return f'User {self.username}, ID: {self.id}'
   
@@ -36,8 +38,15 @@ class Cuisine(db.Model, SerializerMixin):
 
   id = db.Column(db.Integer, primary_key=True)
   name = db.Column(db.String, nullable=False)
+  region = db.Column(db.String)
 
+  restaurants = db.relationship('Restaurant', back_populates='cuisine')
+  users = association_proxy('restaurants', 'user')
+  serialize_rules = ('-users',)
 
+  def __repr__(self):
+     return f"<Cuisine {self.name}, {self.region}>"
+  
 
 class Restaurant(db.Model, SerializerMixin):
   __tablename__ = "restaurants"
@@ -48,3 +57,12 @@ class Restaurant(db.Model, SerializerMixin):
 
   cuisine_id = db.Column(db.Integer, db.ForeignKey('cuisines.id'))
   user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+
+  users = db.relationship('User', back_populates='restaurants')
+  cuisines = db.relationship('Cuisine', back_populates='restaurants')
+
+  serialize_only = ('id', 'name', 'address')
+
+  def __repr__(self):
+     return f"<Restaurant {self.name}>"
+
