@@ -14,7 +14,7 @@ class User(db.Model, SerializerMixin):
 
   restaurants = db.relationship('Restaurant', back_populates = 'user')
   cuisines = association_proxy('restaurants', 'cuisine')
-  serialize_rules = ('-restaurants.user',)
+  serialize_rules = ('-restaurants.user', '-_password_hash',)
 
   @hybrid_property
   def password_hash(self):
@@ -27,7 +27,7 @@ class User(db.Model, SerializerMixin):
       self._password_hash = password_hash.decode('utf-8')
   def authenticate(self, password):
       return bcrypt.check_password_hash(
-          self._password_hash, password.encode('utf-8'))
+          self._password_hash, password.encode('utf-8'))  
   
   def __repr__(self):
       return f'User {self.username}, ID: {self.id}'
@@ -43,6 +43,12 @@ class Cuisine(db.Model, SerializerMixin):
   restaurants = db.relationship('Restaurant', back_populates='cuisine')
   users = association_proxy('restaurants', 'user')
   serialize_rules = ('-users',)
+
+  @validates('name', 'region')
+  def validate_presence(self, key, value):
+     if not value:
+        raise ValueError(f'{key} must exist.')
+     return value
 
   def __repr__(self):
      return f"<Cuisine {self.name}, {self.region}>"
@@ -61,7 +67,13 @@ class Restaurant(db.Model, SerializerMixin):
   users = db.relationship('User', back_populates='restaurants')
   cuisines = db.relationship('Cuisine', back_populates='restaurants')
 
-  serialize_only = ('id', 'name', 'address')
+  serialize_only = ('id', 'name', 'address',)
+
+  @validates('name', 'cuisine_id', 'user_id')
+  def validate_presence(self, key, value):
+     if not value:
+        raise ValueError(f'{key} must exist.')
+     return value
 
   def __repr__(self):
      return f"<Restaurant {self.name}>"
