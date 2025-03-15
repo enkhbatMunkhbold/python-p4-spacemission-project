@@ -1,9 +1,42 @@
-.home-title {
+.home h1 {
   font-weight: bold;
   color: purple;
   text-shadow: 0.5px 0.5px 1px black
 }
 
-.cuisines-list {
-  background-color: #BDB395;
+.home {
+  padding: 4rem;
+  text-align: center;
+}
+
+div.home {
+  position: relative;
+  height: 100%;
+}
+
+div.home:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-image: url('../../public/international\ cuisine.jpeg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+hr.border-line {
+  margin: 3rem 10px;
+  border: 3px solid #6f4e6f;
+  border-radius: 5px;
+  width: auto;
+}
+
+.searchbar {
+  margin: 3rem 2rem 2rem auto;
+  width: 50%;
 }

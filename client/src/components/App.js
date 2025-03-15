@@ -10,6 +10,7 @@ import Restaurants from "./Restaurants";
 function App() {
 
   const [ cuisines, setCuisines ] = useState([])
+  const [ restaurants, setRestaurants ] = useState([])
 
   useEffect(() => {
     fetch('/cuisines')
@@ -22,9 +23,9 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={ <Home cuisines={cuisines}/>}/>
-        <Route path="/cuisine" element={ <Cuisine />}/>
+        <Route path="/cuisine" element={ <Cuisine cuisines={cuisines}/>}/>        
+        <Route path="/restaurants" element={ <Restaurants restaurants={restaurants} setRestaurants={setRestaurants}/>}/>
         <Route exact path="/cuisine/:id" element={ <Create />}/>
-        <Route path="/restaurants" element={ <Restaurants />}/>
       </Routes>      
     </div>
   )

@@ -16,9 +16,9 @@ const Navbar = () => {
           <div className="d-flex px-3">
             <div className="navbar-nav">
               <NavLink className='nav-link' to='/'>Home</NavLink>
-              <NavLink className='nav-link' to='/cuisine'>Cuisine</NavLink>
-              <NavLink className='nav-link' to='/cuisine/new'>Create</NavLink>
+              <NavLink className='nav-link' to='/cuisine'>Cuisine</NavLink>              
               <NavLink className='nav-link' to='/restaurants'>Restaurants</NavLink>
+              <NavLink className='nav-link' to='/cuisine/new'>Create</NavLink>
             </div>
           </div>
         </div>

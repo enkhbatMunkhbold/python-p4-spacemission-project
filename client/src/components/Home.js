@@ -1,23 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../stylesheets/home.css'
+import Search from './Search'
 
-const Home = ({cuisines}) => {
+const Home = () => {
 
-  function renderCuisinesList(list) {
-    return list.map(element => {
-      return <li key={element.id}>element.name</li>
-    })
+  const [ search, setSearch ] = useState('')
+  
+  function handleSearch(input) {
+    setSearch(input)
   }
 
   return (
-    <div class="container text-center">
-      <h1 className='home-title'>Finding Favorite Local Dishes</h1>
-      <div class='row justify-content-center'>
-        <div class='col-4 cuisines-list'>
-          <ol>{renderCuisinesList(cuisines)}</ol>
-        </div>
-      </div>     
-    </div>
+    <div className='home'>
+      <div class="container text-center">
+        <h1>Finding Favorite Local Dishes</h1>   
+        <hr className='border-line'/>   
+        <Search onSearch={handleSearch}/><br/><br/>
+      </div>
+    </div>    
   )
 }
 
