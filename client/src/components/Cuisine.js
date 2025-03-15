@@ -10,14 +10,17 @@ const Cuisine = ({cuisines}) => {
   }
 
   return (
-    <div class="container text-center">
-      <h1 className='title'>Cuisines</h1>
-      <div class='row justify-content-center'>
-        <div class='col-4 cuisines-list'>
-          <ol>{renderCuisinesList(cuisines)}</ol>
-        </div>
-      </div>   
-    </div>
+    <div className="component">
+      <div class="container text-center">
+        <h1>Cuisines</h1>
+        <hr className='border-line'/>
+        <div class='row justify-content-center'>
+          <div class='col-4 cuisines-list'>
+            <ol>{renderCuisinesList(cuisines)}</ol>
+          </div>
+        </div>   
+      </div>
+    </div>   
   )
 }
 

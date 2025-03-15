@@ -22,7 +22,7 @@ function App() {
     <div className="App">      
       <Navbar/>
       <Routes>
-        <Route path="/" element={ <Home cuisines={cuisines}/>}/>
+        <Route path="/" element={ <Home />}/>
         <Route path="/cuisine" element={ <Cuisine cuisines={cuisines}/>}/>        
         <Route path="/restaurants" element={ <Restaurants restaurants={restaurants} setRestaurants={setRestaurants}/>}/>
         <Route exact path="/cuisine/:id" element={ <Create />}/>

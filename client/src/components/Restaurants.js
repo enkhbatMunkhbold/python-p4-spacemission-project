@@ -2,8 +2,9 @@ import React from 'react'
 
 const Restaurants = () => {
   return (
-    <div>
+    <div className="component">
       <h1 className='title'>Restaurants</h1>
+      <hr className='border-line' />
     </div>
   )
 }
