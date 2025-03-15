@@ -1,3 +1,9 @@
+.home-title {
+  font-weight: bold;
+  color: purple;
+  text-shadow: 0.5px 0.5px 1px black
+}
+
 .cuisines-list {
   background-color: #BDB395;
 }

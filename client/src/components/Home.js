@@ -10,12 +10,13 @@ const Home = ({cuisines}) => {
   }
 
   return (
-    <div>
-      <h1 className='title'>Finding Favorite Local Dishes</h1>
-      <div className='cuisines-list'>
-        <ol>{renderCuisinesList(cuisines)}</ol>
-      </div>
-      
+    <div class="container text-center">
+      <h1 className='home-title'>Finding Favorite Local Dishes</h1>
+      <div class='row justify-content-center'>
+        <div class='col-4 cuisines-list'>
+          <ol>{renderCuisinesList(cuisines)}</ol>
+        </div>
+      </div>     
     </div>
   )
 }
