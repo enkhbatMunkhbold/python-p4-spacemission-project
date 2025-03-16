@@ -1,16 +1,4 @@
 {
-  "programs": [
-    {"id": "1", "name": "Vostok", "country": "USSR"},
-    {"id": "2", "name": "Mercury", "country": "USA"},
-    {"id": "3", "name": "Gemini", "country": "USA"},
-    {"id": "4", "name": "Apollo", "country": "USA"},
-    {"id": "5", "name": "Soyuz", "country": "USSR"},
-    {"id": "6", "name": "Space Shuttle", "country": "USA"},
-    {"id": "7", "name": "Shenzhou ", "country": "China"},
-    {"id": "8", "name": "International Space Station", "country": "International"},
-    {"id": "9", "name": "Commercial Crew Program", "country": "USA"},
-    {"id": "10", "name": "Artemis", "country": "USA"}
-  ],
   "missions": [
     {"id": 1, "name": "STS-31", "date": "1990-04-24", "crew": ["Loren Shriver", "Charles Bolden", "Steven Hawley"], "program": "Space Shuttle", "country": "USA"},
     {"id": 2, "name": "Mercury-Atlas 9", "date": "1963-05-15", "crew": ["Gordon Cooper"], "program": "Mercury", "country": "USA"},
