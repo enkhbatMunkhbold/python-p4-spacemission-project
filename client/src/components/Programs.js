@@ -1,28 +1,28 @@
 import React, { useEffect } from 'react'
-import '../stylesheets/app.css'
+import '../stylesheets/programs.css'
 
-const Missions = ({missions, setMissions}) => {
+const Programs = ({ programs, setPrograms }) => {
 
   useEffect(() => {
-    fetch('/missions')
-    .then(data => data.json())
-    .then(setMissions)
-  }, []);
+      fetch('/programs')
+      .then(data => data.json())
+      .then(setPrograms)
+    }, []);
 
-  function renderMissionsList(list) {
+  function renderProgramsList(list) {
     return list.map(element => {
       return <li key={element.id}>{element.name}</li>
     })
   }
 
   return (
-    <div className="component">
+    <div className="programs">
       <div class="container text-center">
-        <h1>Missions</h1>
+        <h1>Programs</h1>
         <hr className='border-line'/>
         <div class='row justify-content-center'>
           <div class='col-4 list'>
-            <ol>{renderMissionsList(missions)}</ol>
+            <ol>{renderProgramsList(programs)}</ol>
           </div>
         </div>   
       </div>
@@ -30,4 +30,4 @@ const Missions = ({missions, setMissions}) => {
   )
 }
 
-export default Missions
+export default Programs

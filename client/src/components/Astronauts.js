@@ -1,5 +1,5 @@
 import React from 'react'
-import '../stylesheets/missions.css'
+import '../stylesheets/app.css'
 
 const Astronauts = ({astronauts}) => {
 
