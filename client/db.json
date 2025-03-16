@@ -1,163 +1,46 @@
 {
-  "cuisines": [
-    {
-      "id": "1",
-      "name": "American"
-    },
-    {
-      "id": "2",
-      "name": "Mexican"
-    },
-    {
-      "id": "3",
-      "name": "Italian"
-    },
-    {
-      "id": "4",
-      "name": "Thai"
-    },
-    {
-      "id": "5",
-      "name": "French"
-    },
-    {
-      "id": "6",
-      "name": "Turkish"
-    },
-    {
-      "id": "7",
-      "name": "Brazilian"
-    },
-    {
-      "id": "8",
-      "name": "Korean"
-    },
-    {
-      "id": "9",
-      "name": "Greek"
-    },
-    {
-      "id": "10",
-      "name": "Japanese"
-    }
+  "Programs": [
+    {"id": "1", "name": "Vostok", "country": "USSR"},
+    {"id": "2", "name": "Mercury", "country": "USA"},
+    {"id": "3", "name": "Gemini", "country": "USA"},
+    {"id": "4", "name": "Apollo", "country": "USA"},
+    {"id": "5", "name": "Soyuz", "country": "USSR"},
+    {"id": "6", "name": "Space Shuttle", "country": "USA"},
+    {"id": "7", "name": "Shenzhou ", "country": "China"},
+    {"id": "8", "name": "International Space Station", "country": "International"},
+    {"id": "9", "name": "Commercial Crew Program", "country": "USA"},
+    {"id": "10", "name": "Artemis", "country": "USA"}
   ],
-  "Restaurants": [
-    {
-      "id": "1",
-      "name": "The Breakfast Club",
-      "image": "../images/the_breakfast_club.jpg",
-      "location": "123 Market St, San Francisco, CA 94103",
-      "isFavorite": true,
-      "phoneNumber": "(415) 234-5656",
-      "rating": 3.5
-    },
-    {
-      "id": "2",
-      "name": "Hasumi Sushi",
-      "image": "../images/hasumi_sushi.jpg",
-      "location": "456 Tech Ave, San Jose, CA 95110",
-      "isFavorite": false,
-      "phoneNumber": "(408) 010-3223",
-      "rating": 3.8
-    },
-    {
-      "id": "3",
-      "name": "Eureka",
-      "image": "../images/eureka.jpg",
-      "location": "789 Bay St, Oakland, CA 94607",
-      "isFavorite": false,
-      "phoneNumber": "(510) 284-4488",
-      "rating": 3.2
-    },
-    {
-      "id": "4",
-      "name": "Manakish Oven & Grill",
-      "image": "../images/manakish_oven_grill.jpg",
-      "location": "321 University Ave, Palo Alto, CA 94301",
-      "isFavorite": true,
-      "phoneNumber": "(669) 645-6233",
-      "rating": 3
-    },
-    {
-      "id": "5",
-      "name": "Ramen Hiroshi",
-      "image": "../images/ramon_hiroshi.jpg",
-      "location": "654 Shattuck Ave, Berkeley, CA 94704",
-      "isFavorite": false,
-      "phoneNumber": "(341) 968-2353",
-      "rating": 2.9
-    },
-    {
-      "id": "6",
-      "name": "Pacific Catch",
-      "image": "../images/pacific_catch.jpg",
-      "location": "987 Castro St, Mountain View, CA 94041",
-      "isFavorite": true,
-      "phoneNumber": "(650) 123-7892",
-      "rating": 3.3
-    },
-    {
-      "id": "7",
-      "name": "Vanda Thai",
-      "image": "../images/vanda_thai.jpg",
-      "location": "123 Fremont Blvd, Fremont, CA 94538",
-      "isFavorite": false,
-      "phoneNumber": "(341) 778-8771",
-      "rating": 2.7
-    },
-    {
-      "id": "8",
-      "name": "Torsap Thai Kitchen",
-      "image": "../images/torsap_thai_kitchen.jpg",
-      "location": "456 Sunnyvale Ave, Sunnyvale, CA 94086",
-      "isFavorite": true,
-      "phoneNumber": "(408) 923-9531",
-      "rating": 3.4
-    },
-    {
-      "id": "9",
-      "name": "Daryoush Persian Cuisine",
-      "image": "../images/daryoush_persian_cuisine.jpg",
-      "location": "789 Santa Clara St, Santa Clara, CA 95050",
-      "isFavorite": false,
-      "phoneNumber": "(669) 851-9070",
-      "rating": 3.6
-    },
-    {
-      "id": "10",
-      "name": "Main Street Kithen & Bar",
-      "image": "../images/main_street_kitchen_bar.jpg",
-      "location": "321 Redwood St, Redwood City, CA 94063",
-      "isFavorite": true,
-      "phoneNumber": "(408) 321-2141",
-      "rating": 3.9
-    },
-    {
-      "id": "376a",
-      "name": "Sakana Sushi",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXs-uBnxMORefAVoZVz7TgJr-iXxO7w2Lg-Q&s",
-      "location": "1280 Newell Ave. Walnut Creek, CA 94596",
-      "isFavorite": true,
-      "phoneNumber": "(925) 253-7763",
-      "rating": 4
-    },
-    {
-      "id": "e0a2",
-      "name": "Haya Ramen",
-      "image": "https://www.beyondthecreek.com/wp-content/uploads/2020/02/haya-ramen-pleasant-hill-outside-dev.jpg",
-      "location": "35 Crescent Dr. Ste D. Pleasant Hill, CA 94523",
-      "isFavorite": false,
-      "phoneNumber": "(925) 849-6171",
-      "rating": "3.1"
-    },
-    {
-      "id": "a2f4",
-      "name": "Dumpling House Mongolian Cuisine",
-      "image": "https://lh3.googleusercontent.com/p/AF1QipOEoVBOq4O9T_XJlOCA5o6H1s6YhEPKSkbSnPvo=s680-w680-h510",
-      "location": "12221 San Pablo Ave #6, Richmond, CA 94805",
-      "isFavorite": true,
-      "phoneNumber": "(510) 234-9898",
-      "rating": "4.0"
-    }
+  "Missions": [
+    {"id": 1, "name": "STS-31", "date": "1990-04-24", "crew": ["Loren Shriver", "Charles Bolden", "Steven Hawley"], "program": "Space Shuttle", "country": "USA"},
+    {"id": 2, "name": "Mercury-Atlas 9", "date": "1963-05-15", "crew": ["Gordon Cooper"], "program": "Mercury", "country": "USA"},
+    {"id": 3, "name": "Artemis III", "date": "2026-??-??", "crew": ["TBD"], "program": "Artemis", "country": "USA"},
+    {"id": 4, "name": "Vostok 6", "date": "1963-06-16", "crew": ["Valentina Tereshkova"], "program": "Vostok", "country": "Soviet Union"},
+    {"id": 5, "name": "Mercury-Atlas 6", "date": "1962-02-20", "crew": ["John Glenn"], "program": "Mercury", "country": "USA"},
+    {"id": 6, "name": "Gemini 6A", "date": "1965-12-15", "crew": ["Wally Schirra", "Tom Stafford"], "program": "Gemini", "country": "USA"},
+    {"id": 7, "name": "Shenzhou 9", "date": "2012-06-16", "crew": ["Jing Haipeng", "Liu Wang", "Liu Yang"], "program": "Shenzhou", "country": "China"},
+    {"id": 8, "name": "Soyuz MS-10", "date": "2018-10-11", "crew": ["Alexey Ovchinin", "Nick Hague"], "program": "Soyuz", "country": "Soviet Union/Russia"},
+    {"id": 9, "name": "Apollo 13", "date": "1970-04-11", "crew": ["Jim Lovell", "Jack Swigert", "Fred Haise"], "program": "Apollo", "country": "USA"},
+    {"id": 10, "name": "Artemis II", "date": "2025-04-??", "crew": ["Reid Wiseman", "Victor Glover", "Christina Koch", "Jeremy Hansen"], "program": "Artemis", "country": "USA"},
+    {"id": 11, "name": "Soyuz 1", "date": "1967-04-23", "crew": ["Vladimir Komarov"], "program": "Soyuz", "country": "Soviet Union/Russia"},
+    {"id": 12, "name": "Gemini 12", "date": "1966-11-11", "crew": ["Jim Lovell", "Buzz Aldrin"], "program": "Gemini", "country": "USA"},
+    {"id": 13, "name": "Artemis I", "date": "2022-11-16", "crew": [], "program": "Artemis", "country": "USA"},
+    {"id": 14, "name": "Shenzhou 5", "date": "2003-10-15", "crew": ["Yang Liwei"], "program": "Shenzhou", "country": "China"},
+    {"id": 15, "name": "Vostok 2", "date": "1961-08-06", "crew": ["Gherman Titov"], "program": "Vostok", "country": "Soviet Union"},
+    {"id": 16, "name": "Mercury-Redstone 3", "date": "1961-05-05", "crew": ["Alan Shepard"], "program": "Mercury", "country": "USA"},
+    {"id": 17, "name": "STS-1", "date": "1981-04-12", "crew": ["John Young", "Robert Crippen"], "program": "Space Shuttle", "country": "USA"},
+    {"id": 18, "name": "Expedition 1", "date": "2000-11-02", "crew": ["William Shepherd", "Sergei Krikalev", "Yuri Gidzenko"], "program": "ISS", "country": "International"},
+    {"id": 19, "name": "Apollo 8", "date": "1968-12-21", "crew": ["Frank Borman", "Jim Lovell", "William Anders"], "program": "Apollo", "country": "USA"},
+    {"id": 20, "name": "Crew Dragon Demo-2", "date": "2020-05-30", "crew": ["Doug Hurley", "Bob Behnken"], "program": "Commercial Crew", "country": "USA"},
+    {"id": 21, "name": "Crew-5", "date": "2022-10-05", "crew": ["Nicole Mann", "Josh Cassada", "Koichi Wakata", "Anna Kikina"], "program": "Commercial Crew", "country": "USA"},
+    {"id": 22, "name": "Soyuz 11", "date": "1971-06-07", "crew": ["Georgi Dobrovolski", "Viktor Patsayev", "Vladislav Volkov"], "program": "Soyuz", "country": "Soviet Union/Russia"},
+    {"id": 23, "name": "Shenzhou 12", "date": "2021-06-17", "crew": ["Nie Haisheng", "Liu Boming", "Tang Hongbo"], "program": "Shenzhou", "country": "China"},
+    {"id": 24, "name": "Expedition 50", "date": "2016-11-17", "crew": ["Shane Kimbrough", "Sergey Ryzhikov", "Peggy Whitson"], "program": "ISS", "country": "International"},
+    {"id": 25, "name": "Vostok 1", "date": "1961-04-12", "crew": ["Yuri Gagarin"], "program": "Vostok", "country": "Soviet Union"},
+    {"id": 26, "name": "Apollo 11", "date": "1969-07-20", "crew": ["Neil Armstrong", "Buzz Aldrin", "Michael Collins"], "program": "Apollo", "country": "USA"},
+    {"id": 27, "name": "Crew-1", "date": "2020-11-15", "crew": ["Michael Hopkins", "Victor Glover", "Soichi Noguchi", "Shannon Walker"], "program": "Commercial Crew", "country": "USA"},
+    {"id": 28, "name": "Expedition 69", "date": "2023-04-15", "crew": ["Sergey Prokopyev", "Dmitry Petelin", "Frank Rubio"], "program": "ISS", "country": "International"},
+    {"id": 29, "name": "STS-41B", "date": "1984-02-03", "crew": ["Vance Brand", "Robert Gibson", "Bruce McCandless"], "program": "Space Shuttle", "country": "USA"},
+    {"id": 30, "name": "Soyuz MS-10", "date": "2018-10-11", "crew": ["Alexey Ovchinin", "Nick Hague"], "program": "Soyuz", "country": "Soviet Union/Russia"}
   ]
-}
+}  

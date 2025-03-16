@@ -4,7 +4,10 @@
   margin-left: 10px;
 }
 
-.header {
-  /* margin-bottom: 3rem; */
+.header {  
   font-weight: 500;
+}
+
+.header nav {
+  background-color: #E8F9FF !important;
 }

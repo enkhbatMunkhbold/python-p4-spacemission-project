@@ -7,8 +7,8 @@ const Navbar = () => {
     <div className='header'>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <span className="navbar-brand mb-0 h1" >Restaurant Finder
-            <img className='logo' src='../restaurant.png' alt='restaurant logo...'/>
+          <span className="navbar-brand mb-0 h1" >Space Programs
+            <img className='logo' src='../rocket.png' alt='rocket logo...'/>
           </span>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -16,9 +16,9 @@ const Navbar = () => {
           <div className="d-flex px-3">
             <div className="navbar-nav">
               <NavLink className='nav-link' to='/'>Home</NavLink>
-              <NavLink className='nav-link' to='/cuisine'>Cuisine</NavLink>              
-              <NavLink className='nav-link' to='/restaurants'>Restaurants</NavLink>
-              <NavLink className='nav-link' to='/cuisine/new'>Create</NavLink>
+              <NavLink className='nav-link' to='/missions'>Missions</NavLink>              
+              <NavLink className='nav-link' to='/astronauts'>Astronauts</NavLink>
+              <NavLink className='nav-link' to='/missions/new'>Create</NavLink>
             </div>
           </div>
         </div>

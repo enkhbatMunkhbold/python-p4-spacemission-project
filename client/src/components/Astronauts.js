@@ -1,9 +1,9 @@
 import React from 'react'
-import '../stylesheets/cuisine.css'
+import '../stylesheets/missions.css'
 
-const Cuisine = ({cuisines}) => {
+const Astronauts = ({astronauts}) => {
 
-  function renderCuisinesList(list) {
+  function renderAstronautsList(list) {
     return list.map(element => {
       return <li key={element.id}>{element.name}</li>
     })
@@ -12,11 +12,11 @@ const Cuisine = ({cuisines}) => {
   return (
     <div className="component">
       <div class="container text-center">
-        <h1>Cuisines</h1>
+        <h1>Astronauts</h1>
         <hr className='border-line'/>
         <div class='row justify-content-center'>
           <div class='col-4 cuisines-list'>
-            <ol>{renderCuisinesList(cuisines)}</ol>
+            <ol>{renderAstronautsList(astronauts)}</ol>
           </div>
         </div>   
       </div>
@@ -24,4 +24,4 @@ const Cuisine = ({cuisines}) => {
   )
 }
 
-export default Cuisine
+export default Astronauts

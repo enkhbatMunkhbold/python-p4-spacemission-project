@@ -2,20 +2,20 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 import Home from "./Home";
-import Cuisine from "./Cuisine"
+import Missions from "./Missions"
 import Create from "./Create";
 import "../stylesheets/app.css"
-import Restaurants from "./Restaurants";
+import Astronauts from "./Astronauts";
 
 function App() {
 
-  const [ cuisines, setCuisines ] = useState([])
-  const [ restaurants, setRestaurants ] = useState([])
+  const [ missions, setMissions ] = useState([])
+  const [ astronauts, setAstronauts ] = useState([])
 
   useEffect(() => {
-    fetch('/cuisines')
+    fetch('/missions')
     .then(cus => cus.json())
-    .then(setCuisines)
+    .then(setMissions)
   }, []);
 
   return (
@@ -23,9 +23,9 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={ <Home />}/>
-        <Route path="/cuisine" element={ <Cuisine cuisines={cuisines}/>}/>        
-        <Route path="/restaurants" element={ <Restaurants restaurants={restaurants} setRestaurants={setRestaurants}/>}/>
-        <Route exact path="/cuisine/:id" element={ <Create />}/>
+        <Route path="/missions" element={ <Missions missions={missions}/>}/>        
+        <Route path="/astronauts" element={ <Astronauts astronauts={astronauts} setAstronauts={setAstronauts}/>}/>
+        <Route exact path="/missions/:id" element={ <Create />}/>
       </Routes>      
     </div>
   )
