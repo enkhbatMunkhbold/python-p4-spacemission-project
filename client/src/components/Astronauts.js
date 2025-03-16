@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../stylesheets/app.css'
 
-const Astronauts = ({astronauts}) => {
+const Astronauts = ({ astronauts, setAstronauts }) => {
+
+  useEffect(() => {
+      fetch('/astronauts')
+      .then(data => data.json())
+      .then(setAstronauts)
+    }, []);
+  
 
   function renderAstronautsList(list) {
     return list.map(element => {
@@ -15,7 +22,7 @@ const Astronauts = ({astronauts}) => {
         <h1>Astronauts</h1>
         <hr className='border-line'/>
         <div class='row justify-content-center'>
-          <div class='col-4 cuisines-list'>
+          <div class='col-4 list'>
             <ol>{renderAstronautsList(astronauts)}</ol>
           </div>
         </div>   

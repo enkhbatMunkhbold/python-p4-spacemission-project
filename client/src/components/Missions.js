@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import '../stylesheets/app.css'
 
-const Missions = ({missions, setMissions}) => {
+const Missions = ({ missions, setMissions }) => {
 
   useEffect(() => {
     fetch('/missions')
     .then(data => data.json())
     .then(setMissions)
-  }, []);
+  }, [setMissions]);
 
   function renderMissionsList(list) {
     return list.map(element => {

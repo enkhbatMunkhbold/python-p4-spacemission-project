@@ -7,7 +7,7 @@ const Programs = ({ programs, setPrograms }) => {
       fetch('/programs')
       .then(data => data.json())
       .then(setPrograms)
-    }, []);
+    }, [setPrograms]);
 
   function renderProgramsList(list) {
     return list.map(element => {
