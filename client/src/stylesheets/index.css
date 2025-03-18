@@ -13,10 +13,8 @@ body {
 }
 
 h1 {
-  /* color: #ecb176;
-  text-shadow: 0.5px 0.5px 1px black, 0 0 1em yellow */
   font-weight: bold;
-  color: #ecb176;
+  color: purple;
   text-shadow: 0.5px 0.5px 1px black
 }
 

@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className='header'>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <span className="navbar-brand mb-0 h1" >Space Programs
+          <span className="navbar-brand mb-0 h1" >NASA
             <img className='logo' src='../rocket.png' alt='rocket logo...'/>
           </span>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
