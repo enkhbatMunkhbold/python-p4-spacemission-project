@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import "../stylesheets/create.css"
 
 const Create = ({ onAddAstronaut }) => {
-  const initialNewAstronaut = { name: '', image: '', location: '', isFavorite: false, phoneNumber: '', rating: 0 }
+  const initialNewAstronaut = { name: '', image: '', nationality: '', isInService: true, missions: [] }
   const [ newAstronaut, setNewAstronaut ]= useState(initialNewAstronaut)
   
-  const { name, image, location, phoneNumber, rating } = newAstronaut
+  const { name, image, nationality, missions } = newAstronaut
 
   function handleChange(e) {
     const { name, value } = e.target
@@ -22,10 +22,9 @@ const Create = ({ onAddAstronaut }) => {
     const astronautData = {
       name: newAstronaut.name,
       image: newAstronaut.image,
-      location: newAstronaut.location,
-      isFavorite: newAstronaut.isFavorite,
-      phoneNumber: newAstronaut.phoneNumber,
-      rating: newAstronaut.rating
+      nationality: newAstronaut.nationality,
+      isInService: newAstronaut.isInService,
+      missions: newAstronaut.missions
     }
     fetch('/astronauts', {
       method: 'POST',
@@ -56,36 +55,29 @@ const Create = ({ onAddAstronaut }) => {
             <div id="namelHelp" className="form-text">It could be your favorite astronaut...</div>
           </div>
           <div className="mb-3">
-            <label htmlFor="restaurantImage" className="form-label">Image Link</label>
+            <label htmlFor="astronautImage" className="form-label">Image Link</label>
             <input type="text" className="form-control" 
               name="image" value={image} onChange={handleChange}
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="location" className="form-label">Location</label>
+            <label htmlFor="nationality" className="form-label">Nationality</label>
             <input type="text" className="form-control" 
-              name="location" value={location}
+              name="nationality" value={nationality}
               onChange={handleChange}
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="phoneNumber" className="form-label">Phone Number</label>
+            <label htmlFor="missions" className="form-label">Missions</label>
             <input type="text" className="form-control" 
-              name="phoneNumber" value={phoneNumber} onChange={handleChange}
-            />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="rating" className="form-label">Rating</label>
-            <input step="0.1" type="number" className="form-control" 
-              name="rating" value={rating}
-              onChange={handleChange}
+              name="missions" value={missions} onChange={handleChange}
             />
           </div>
           <div className="mb-3 form-check">
             <input type="checkbox" className="form-check-input" 
-              name="isFavorite" onChange={handleCheck}
+              name="isInService" onChange={handleCheck}
             />
-            <label className="form-check-label" htmlFor="isFavorite">Favorite</label>
+            <label className="form-check-label" htmlFor="isInService">In Service</label>
           </div>
           <button type="submit" className="btn btn-light">Submit</button>
         </form>
