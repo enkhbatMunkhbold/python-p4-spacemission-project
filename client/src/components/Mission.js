@@ -1,14 +1,14 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import "../stylesheets/astronaut.css"
+import "../stylesheets/mission.css"
 
-const Astronaut = ({ astronaut, onUpdateList }) => {
+const Mission = ({ mission, onUpdateList }) => {
 
   const navigate = useNavigate()
-  const { id, name, image, location, isFavorite } = astronaut  
+  const { id, name, image, country, isFavorite } = mission  
   
   function handleFavoriteClick() {    
-    fetch(`/astronauts/${id}`, {
+    fetch(`/missions/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "Application/JSON"
@@ -21,7 +21,7 @@ const Astronaut = ({ astronaut, onUpdateList }) => {
   }
 
   function handleButtonClick() {
-    navigate(`/astronauts/${id}`)
+    navigate(`/missions/${id}`)
   }
 
   return (
@@ -29,7 +29,7 @@ const Astronaut = ({ astronaut, onUpdateList }) => {
       <img src={image} alt={name} />
       <div className="container">
         <h5>{name}</h5>
-        <p>Location: {location}</p> 
+        <p>country: {country}</p> 
         <div className="btn-toolbar justify-content-between" role="toolbar">
           <div className="btn-group" role="group" aria-label="button">
             <button className='btn btn-light' onClick={handleButtonClick}>More info...</button>
@@ -48,4 +48,4 @@ const Astronaut = ({ astronaut, onUpdateList }) => {
   )
 }
 
-export default Astronaut
+export default Mission

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import '../stylesheets/home.css'
 import Search from './Search'
-import Astronaut from './Astronaut'
+import Mission from './Mission'
 
-const Home = ({ astronauts, onUpdateList }) => {
+const Home = ({ missions, onUpdateList }) => {
 
   const [ search, setSearch ] = useState('')
 
@@ -20,12 +20,12 @@ const Home = ({ astronauts, onUpdateList }) => {
     setSearch(input)
   }
 
-  const filteredAstronauts = astronauts.filter(ast => ast.name.toLowerCase().includes(search.toLowerCase()))
+  const filteredMissions = missions.filter(mission => mission.name.toLowerCase().includes(search.toLowerCase()))
 
-  const displayAstronauts = filteredAstronauts.map(ast => {
+  const displayMissions = filteredMissions.map(mission => {
     return (
-      <Astronaut key={ast.id} 
-        astronaut={ast} 
+      <Mission key={mission.id} 
+        mission={mission} 
         onUpdateList={onUpdateList}
       />
     )
@@ -38,7 +38,7 @@ const Home = ({ astronauts, onUpdateList }) => {
         <hr className='border-line'/>   
         <Search onSearch={handleSearch}/><br/><br/>
         <ul className='cards'>
-          {search.length === 0 ? <Astronaut astronaut={initialData}/> : displayAstronauts}        
+          {search.length === 0 ? <Mission mission={initialData}/> : displayMissions}        
         </ul> 
       </div>
     </div>    

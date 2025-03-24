@@ -10,8 +10,8 @@ div.create:before {
   top: 0;
   width: 100%;
   height: 93vh;
-  opacity: 0.3;
-  background-image: url('../../public/space.png');
+  opacity: 0.4;
+  background-image: url('../../public/apollo-11.jpg');
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
@@ -55,6 +55,6 @@ label {
   margin-top: 1.5rem;
 }
 
-.form-text, h1, label{
+.form-text, h1.title, label{
   color: white;
 }

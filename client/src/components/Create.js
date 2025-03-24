@@ -44,7 +44,7 @@ const Create = ({ onAddAstronaut }) => {
   return (
     <div className="create">
       <div className='new-astronaut-form'>
-        <h1>New Astronaut</h1>
+        <h1 className='title'>New Astronaut</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="astronautName" className="form-label">Astronaut Name</label>
