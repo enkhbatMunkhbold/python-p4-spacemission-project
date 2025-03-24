@@ -2,368 +2,183 @@
   "missions": [
     {
       "id": 1,
-      "name": "STS-31",
-      "date": "1990-04-24",
-      "image": "",
-      "crew": [
-        "Loren Shriver",
-        "Charles Bolden",
-        "Steven Hawley"
-      ],
-      "program": "Space Shuttle",
-      "country": "USA"
+      "name": "Vostok 1",
+      "date": "1961-04-12",
+      "image": "https://example.com/vostok1.jpg",
+      "crew": ["Yuri Gagarin"],
+      "space_shuttle": "Vostok",
+      "country": "Soviet Union"
     },
     {
       "id": 2,
-      "name": "Mercury-Atlas 9",
-      "date": "1963-05-15",
-      "image": "",
-      "crew": [
-        "Gordon Cooper"
-      ],
-      "program": "Mercury",
+      "name": "Mercury-Redstone 3",
+      "date": "1961-05-05",
+      "image": "https://example.com/mercury-redstone3.jpg",
+      "crew": ["Alan Shepard"],
+      "space_shuttle": "Freedom 7",
       "country": "USA"
     },
     {
       "id": 3,
-      "name": "Artemis III",
-      "date": "2026-??-??",
-      "image": "",
-      "crew": [
-        "TBD"
-      ],
-      "program": "Artemis",
+      "name": "Gemini 4",
+      "date": "1965-06-03",
+      "image": "https://example.com/gemini4.jpg",
+      "crew": ["James McDivitt", "Ed White"],
+      "space_shuttle": "Gemini 4",
       "country": "USA"
     },
     {
       "id": 4,
-      "name": "Vostok 6",
-      "date": "1963-06-16",
-      "image": "",
-      "crew": [
-        "Valentina Tereshkova"
-      ],
-      "program": "Vostok",
-      "country": "Soviet Union"
-    },
-    {
-      "id": 5,
-      "name": "Mercury-Atlas 6",
-      "date": "1962-02-20",
-      "image": "",
-      "crew": [
-        "John Glenn"
-      ],
-      "program": "Mercury",
+      "name": "Apollo 11",
+      "date": "1969-07-20",
+      "image": "https://example.com/apollo11.jpg",
+      "crew": ["Neil Armstrong", "Buzz Aldrin", "Michael Collins"],
+      "space_shuttle": "Apollo 11",
       "country": "USA"
     },
     {
+      "id": 5,
+      "name": "Soyuz 11",
+      "date": "1971-06-07",
+      "image": "https://example.com/soyuz11.jpg",
+      "crew": ["Georgi Dobrovolski", "Viktor Patsayev", "Vladislav Volkov"],
+      "space_shuttle": "Soyuz 11",
+      "country": "Soviet Union"
+    },
+    {
       "id": 6,
-      "name": "Gemini 6A",
-      "date": "1965-12-15",
-      "image": "",
-      "crew": [
-        "Wally Schirra",
-        "Tom Stafford"
-      ],
-      "program": "Gemini",
+      "name": "STS-1",
+      "date": "1981-04-12",
+      "image": "https://example.com/sts1.jpg",
+      "crew": ["John Young", "Robert Crippen"],
+      "space_shuttle": "Columbia",
       "country": "USA"
     },
     {
       "id": 7,
-      "name": "Shenzhou 9",
-      "date": "2012-06-16",
-      "image": "",
-      "crew": [
-        "Jing Haipeng",
-        "Liu Wang",
-        "Liu Yang"
-      ],
-      "program": "Shenzhou",
-      "country": "China"
+      "name": "STS-31",
+      "date": "1990-04-24",
+      "image": "https://example.com/sts31.jpg",
+      "crew": ["Loren Shriver", "Charles Bolden", "Steven Hawley"],
+      "space_shuttle": "Discovery",
+      "country": "USA"
     },
     {
       "id": 8,
-      "name": "Soyuz MS-10",
-      "date": "2018-10-11",
-      "image": "",
-      "crew": [
-        "Alexey Ovchinin",
-        "Nick Hague"
-      ],
-      "program": "Soyuz",
-      "country": "Soviet Union/Russia"
+      "name": "Shenzhou 5",
+      "date": "2003-10-15",
+      "image": "https://example.com/shenzhou5.jpg",
+      "crew": ["Yang Liwei"],
+      "space_shuttle": "Shenzhou 5",
+      "country": "China"
     },
     {
       "id": 9,
-      "name": "Apollo 13",
-      "date": "1970-04-11",
-      "image": "",
-      "crew": [
-        "Jim Lovell",
-        "Jack Swigert",
-        "Fred Haise"
-      ],
-      "program": "Apollo",
+      "name": "Crew Dragon Demo-2",
+      "date": "2020-05-30",
+      "image": "https://example.com/crew-dragon-demo2.jpg",
+      "crew": ["Doug Hurley", "Bob Behnken"],
+      "space_shuttle": "Crew Dragon",
       "country": "USA"
     },
     {
       "id": 10,
-      "name": "Artemis II",
-      "date": "2025-04-??",
-      "image": "",
-      "crew": [
-        "Reid Wiseman",
-        "Victor Glover",
-        "Christina Koch",
-        "Jeremy Hansen"
-      ],
-      "program": "Artemis",
+      "name": "Artemis I",
+      "date": "2022-11-16",
+      "image": "https://example.com/artemis1.jpg",
+      "crew": [],
+      "space_shuttle": "Orion",
       "country": "USA"
     },
     {
       "id": 11,
-      "name": "Soyuz 1",
-      "date": "1967-04-23",
-      "image": "",
-      "crew": [
-        "Vladimir Komarov"
-      ],
-      "program": "Soyuz",
-      "country": "Soviet Union/Russia"
+      "name": "Apollo 8",
+      "date": "1968-12-21",
+      "image": "https://example.com/apollo8.jpg",
+      "crew": ["Frank Borman", "Jim Lovell", "William Anders"],
+      "space_shuttle": "Apollo 8",
+      "country": "USA"
     },
     {
       "id": 12,
-      "name": "Gemini 12",
-      "date": "1966-11-11",
-      "image": "",
-      "crew": [
-        "Jim Lovell",
-        "Buzz Aldrin"
-      ],
-      "program": "Gemini",
+      "name": "STS-41B",
+      "date": "1984-02-03",
+      "image": "https://example.com/sts41b.jpg",
+      "crew": ["Vance Brand", "Robert Gibson", "Bruce McCandless"],
+      "space_shuttle": "Challenger",
       "country": "USA"
     },
     {
       "id": 13,
-      "name": "Artemis I",
-      "date": "2022-11-16",
-      "image": "",
-      "crew": [],
-      "program": "Artemis",
-      "country": "USA"
+      "name": "Soyuz MS-10",
+      "date": "2018-10-11",
+      "image": "https://example.com/soyuzms10.jpg",
+      "crew": ["Alexey Ovchinin", "Nick Hague"],
+      "space_shuttle": "Soyuz MS-10",
+      "country": "Russia"
     },
     {
       "id": 14,
-      "name": "Shenzhou 5",
-      "date": "2003-10-15",
-      "image": "",
-      "crew": [
-        "Yang Liwei"
-      ],
-      "program": "Shenzhou",
-      "country": "China"
+      "name": "Expedition 1",
+      "date": "2000-11-02",
+      "image": "https://example.com/expedition1.jpg",
+      "crew": ["William Shepherd", "Sergei Krikalev", "Yuri Gidzenko"],
+      "space_shuttle": "ISS",
+      "country": "International"
     },
     {
       "id": 15,
-      "name": "Vostok 2",
-      "date": "1961-08-06",
-      "image": "",
-      "crew": [
-        "Gherman Titov"
-      ],
-      "program": "Vostok",
-      "country": "Soviet Union"
+      "name": "Expedition 69",
+      "date": "2023-04-15",
+      "image": "https://example.com/expedition69.jpg",
+      "crew": ["Sergey Prokopyev", "Dmitry Petelin", "Frank Rubio"],
+      "space_shuttle": "ISS",
+      "country": "International"
     },
     {
       "id": 16,
-      "name": "Mercury-Redstone 3",
-      "date": "1961-05-05",
-      "image": "",
-      "crew": [
-        "Alan Shepard"
-      ],
-      "program": "Mercury",
+      "name": "Gemini 12",
+      "date": "1966-11-11",
+      "image": "https://example.com/gemini12.jpg",
+      "crew": ["Jim Lovell", "Buzz Aldrin"],
+      "space_shuttle": "Gemini 12",
       "country": "USA"
     },
     {
       "id": 17,
-      "name": "STS-1",
-      "date": "1981-04-12",
-      "image": "",
-      "crew": [
-        "John Young",
-        "Robert Crippen"
-      ],
-      "program": "Space Shuttle",
+      "name": "Apollo 13",
+      "date": "1970-04-11",
+      "image": "https://example.com/apollo13.jpg",
+      "crew": ["Jim Lovell", "Jack Swigert", "Fred Haise"],
+      "space_shuttle": "Apollo 13",
       "country": "USA"
     },
     {
       "id": 18,
-      "name": "Expedition 1",
-      "date": "2000-11-02",
-      "image": "",
-      "crew": [
-        "William Shepherd",
-        "Sergei Krikalev",
-        "Yuri Gidzenko"
-      ],
-      "program": "ISS",
-      "country": "International"
+      "name": "STS-51-L",
+      "date": "1986-01-28",
+      "image": "https://example.com/sts51l.jpg",
+      "crew": ["Francis Scobee", "Michael Smith", "Ronald McNair", "Ellison Onizuka", "Judith Resnik", "Gregory Jarvis", "Christa McAuliffe"],
+      "space_shuttle": "Challenger",
+      "country": "USA"
     },
     {
       "id": 19,
-      "name": "Apollo 8",
-      "date": "1968-12-21",
-      "image": "",
-      "crew": [
-        "Frank Borman",
-        "Jim Lovell",
-        "William Anders"
-      ],
-      "program": "Apollo",
-      "country": "USA"
-    },
-    {
-      "id": 20,
-      "name": "Crew Dragon Demo-2",
-      "date": "2020-05-30",
-      "image": "",
-      "crew": [
-        "Doug Hurley",
-        "Bob Behnken"
-      ],
-      "program": "Commercial Crew",
-      "country": "USA"
-    },
-    {
-      "id": 21,
-      "name": "Crew-5",
-      "date": "2022-10-05",
-      "image": "",
-      "crew": [
-        "Nicole Mann",
-        "Josh Cassada",
-        "Koichi Wakata",
-        "Anna Kikina"
-      ],
-      "program": "Commercial Crew",
-      "country": "USA"
-    },
-    {
-      "id": 22,
-      "name": "Soyuz 11",
-      "date": "1971-06-07",
-      "image": "",
-      "crew": [
-        "Georgi Dobrovolski",
-        "Viktor Patsayev",
-        "Vladislav Volkov"
-      ],
-      "program": "Soyuz",
-      "country": "Soviet Union/Russia"
-    },
-    {
-      "id": 23,
-      "name": "Shenzhou 12",
-      "date": "2021-06-17",
-      "image": "",
-      "crew": [
-        "Nie Haisheng",
-        "Liu Boming",
-        "Tang Hongbo"
-      ],
-      "program": "Shenzhou",
+      "name": "Shenzhou 9",
+      "date": "2012-06-16",
+      "image": "https://example.com/shenzhou9.jpg",
+      "crew": ["Jing Haipeng", "Liu Wang", "Liu Yang"],
+      "space_shuttle": "Shenzhou 9",
       "country": "China"
     },
     {
-      "id": 24,
-      "name": "Expedition 50",
-      "date": "2016-11-17",
-      "image": "",
-      "crew": [
-        "Shane Kimbrough",
-        "Sergey Ryzhikov",
-        "Peggy Whitson"
-      ],
-      "program": "ISS",
-      "country": "International"
-    },
-    {
-      "id": 25,
-      "name": "Vostok 1",
-      "date": "1961-04-12",
-      "image": "",
-      "crew": [
-        "Yuri Gagarin"
-      ],
-      "program": "Vostok",
-      "country": "Soviet Union"
-    },
-    {
-      "id": 26,
-      "name": "Apollo 11",
-      "date": "1969-07-20",
-      "image": "",
-      "crew": [
-        "Neil Armstrong",
-        "Buzz Aldrin",
-        "Michael Collins"
-      ],
-      "program": "Apollo",
+      "id": 20,
+      "name": "Artemis II",
+      "date": "2025-04-??",
+      "image": "https://example.com/artemis2.jpg",
+      "crew": ["Reid Wiseman", "Victor Glover", "Christina Koch", "Jeremy Hansen"],
+      "space_shuttle": "Orion",
       "country": "USA"
-    },
-    {
-      "id": 27,
-      "name": "Crew-1",
-      "date": "2020-11-15",
-      "image": "",
-      "crew": [
-        "Michael Hopkins",
-        "Victor Glover",
-        "Soichi Noguchi",
-        "Shannon Walker"
-      ],
-      "program": "Commercial Crew",
-      "country": "USA"
-    },
-    {
-      "id": 28,
-      "name": "Expedition 69",
-      "date": "2023-04-15",
-      "image": "",
-      "crew": [
-        "Sergey Prokopyev",
-        "Dmitry Petelin",
-        "Frank Rubio"
-      ],
-      "program": "ISS",
-      "country": "International"
-    },
-    {
-      "id": 29,
-      "name": "STS-41B",
-      "date": "1984-02-03",
-      "image": "",
-      "crew": [
-        "Vance Brand",
-        "Robert Gibson",
-        "Bruce McCandless"
-      ],
-      "program": "Space Shuttle",
-      "country": "USA"
-    },
-    {
-      "id": 30,
-      "name": "Soyuz MS-10",
-      "date": "2018-10-11",
-      "image": "",
-      "crew": [
-        "Alexey Ovchinin",
-        "Nick Hague"
-      ],
-      "program": "Soyuz",
-      "country": "Soviet Union/Russia"
     }
   ],
   "astronauts": [

@@ -16,7 +16,7 @@ function App() {
     <div className="App">      
       <Navbar/>
       <Routes>
-        <Route path="/" element={ <Home astronauts={astronauts}/>}/>
+        <Route path="/" element={ <Home missions={missions}/>}/>
         <Route path="/missions" element={ <Missions missions={missions} setMissions={setMissions}/>}/>        
         <Route path="/astronauts" element={ <Astronauts astronauts={astronauts} setAstronauts={setAstronauts}/>}/>
         <Route exact path="/missions/:id" element={ <Create />}/>

@@ -6,15 +6,6 @@ import Mission from './Mission'
 const Home = ({ missions, onUpdateList }) => {
 
   const [ search, setSearch ] = useState('')
-
-  const initialData = {
-    name: '',
-    image: '../images/default-image.png',
-    location: '',
-    isFavorite: false,
-    phoneNumber: '',
-    rating: 0
-  }
   
   function handleSearch(input) {
     setSearch(input)
@@ -38,7 +29,7 @@ const Home = ({ missions, onUpdateList }) => {
         <hr className='border-line'/>   
         <Search onSearch={handleSearch}/><br/><br/>
         <ul className='cards'>
-          {search.length === 0 ? <Mission mission={initialData}/> : displayMissions}        
+          { search.length < 1 ? null : displayMissions }        
         </ul> 
       </div>
     </div>    
