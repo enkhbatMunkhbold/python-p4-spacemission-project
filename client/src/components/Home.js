@@ -11,8 +11,8 @@ const Home = ({ missions, onUpdateList }) => {
     setSearch(input)
   }
 
-  const filteredMissions = missions.filter(mission => mission.name.toLowerCase().includes(search.toLowerCase()))
-
+  const filteredMissions = missions.filter(mission => mission.space_shuttle.toLowerCase().includes(search.toLowerCase()))
+ 
   const displayMissions = filteredMissions.map(mission => {
     return (
       <Mission key={mission.id} 
@@ -24,7 +24,7 @@ const Home = ({ missions, onUpdateList }) => {
 
   return (
     <div className='home'>
-      <div class="container text-center">
+      <div className="container text-center">
         <h1>Space Missions</h1>   
         <hr className='border-line'/>   
         <Search onSearch={handleSearch}/><br/><br/>

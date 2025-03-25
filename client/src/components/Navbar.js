@@ -8,7 +8,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <span className="navbar-brand mb-0 h1" >NASA
-            <img className='logo' src='../NASA.png' alt='NASA logo...'/>
+            <img className='logo' src='../images/NASA.png' alt='NASA logo...'/>
           </span>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>

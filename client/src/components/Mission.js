@@ -5,7 +5,7 @@ import "../stylesheets/mission.css"
 const Mission = ({ mission, onUpdateList }) => {
 
   const navigate = useNavigate()
-  const { id, name, image, country, isFavorite } = mission  
+  const { id, date, image, space_shuttle, country, isInService } = mission  
   
   function handleFavoriteClick() {    
     fetch(`/missions/${id}`, {
@@ -13,7 +13,7 @@ const Mission = ({ mission, onUpdateList }) => {
       headers: {
         "Content-Type": "Application/JSON"
       },
-      body: JSON.stringify({isFavorite: !isFavorite})
+      body: JSON.stringify({isInService: !isInService})
     }).then(res => res.json())
     .then(data => {
       onUpdateList(data)
@@ -26,17 +26,18 @@ const Mission = ({ mission, onUpdateList }) => {
 
   return (
     <div className='card position-relative'>
-      <img src={image} alt={name} />
+      <img src={image} alt={space_shuttle} />
       <div className="container">
-        <h5>{name}</h5>
-        <p>country: {country}</p> 
+        <h5>{space_shuttle}</h5>
+        <p>Country: {country}</p> 
+        <p>Date: {date}</p>
         <div className="btn-toolbar justify-content-between" role="toolbar">
           <div className="btn-group" role="group" aria-label="button">
             <button className='btn btn-light' onClick={handleButtonClick}>More info...</button>
           </div>
           <div className="favorite-group">
             <div className="favorite-group-icon">
-              {isFavorite? 
+              {isInService? 
                 ( <i className="bi bi-heart-fill" onClick={handleFavoriteClick}></i>) : 
                 ( <i className="bi bi-heart" onClick={handleFavoriteClick}></i>)
               }

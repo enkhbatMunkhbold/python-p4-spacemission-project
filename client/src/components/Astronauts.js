@@ -7,7 +7,7 @@ const Astronauts = ({ astronauts, setAstronauts }) => {
       fetch('/astronauts')
       .then(data => data.json())
       .then(setAstronauts)
-    }, []);
+    }, [setAstronauts]);
   
 
   function renderAstronautsList(list) {
@@ -18,11 +18,11 @@ const Astronauts = ({ astronauts, setAstronauts }) => {
 
   return (
     <div className="component">
-      <div class="container text-center">
+      <div className="container text-center">
         <h1>Astronauts</h1>
         <hr className='border-line'/>
-        <div class='row justify-content-center'>
-          <div class='col-4 list'>
+        <div className='row justify-content-center'>
+          <div className='col-4 list'>
             <ol>{renderAstronautsList(astronauts)}</ol>
           </div>
         </div>   

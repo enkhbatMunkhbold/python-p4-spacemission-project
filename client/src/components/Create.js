@@ -1,76 +1,91 @@
 import React, { useState } from 'react'
 import "../stylesheets/create.css"
 
-const Create = ({ onAddAstronaut }) => {
-  const initialNewAstronaut = { name: '', image: '', nationality: '', isInService: true, missions: [] }
-  const [ newAstronaut, setNewAstronaut ]= useState(initialNewAstronaut)
+const Create = ({ onAddMission }) => {
+  const initialNewMission = { name: '', date: '', image: '', crew: [], space_shuttle: '', country: '', isInService: true}
+  const [ newMission, setNewMission ]= useState(initialNewMission)
   
-  const { name, image, nationality, missions } = newAstronaut
+  const { name, date, image, crew, space_shuttle, country } = newMission
 
   function handleChange(e) {
     const { name, value } = e.target
-    setNewAstronaut({...newAstronaut, [name]: value})
+    setNewMission({...newMission, [name]: value})
   }
 
   function handleCheck(e) {
     const { name, checked } = e.target
-    setNewAstronaut({...newAstronaut, [name]: checked})
+    setNewMission({...newMission, [name]: checked})
   }
 
   function handleSubmit(e) {
     e.preventDefault()
-    const astronautData = {
-      name: newAstronaut.name,
-      image: newAstronaut.image,
-      nationality: newAstronaut.nationality,
-      isInService: newAstronaut.isInService,
-      missions: newAstronaut.missions
+    const missionData = {
+      name: newMission.name,
+      date: newMission.date,
+      image: newMission.image,
+      crew: newMission.crew,
+      space_shuttle: newMission.space_shuttle,
+      country: newMission.country,
+      isInService: newMission.isInService
     }
-    fetch('/astronauts', {
+    fetch('/missions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(astronautData)
+      body: JSON.stringify(missionData)
     })
      .then(res => res.json())
-     .then(astronaut => {
-        console.log(astronaut)
-        onAddAstronaut(astronaut)
+     .then(mission => {
+        console.log(mission)
+        onAddMission(mission)
       })
-    setNewAstronaut(initialNewAstronaut)
+    setNewMission(initialNewMission)
   }
 
   return (
     <div className="create">
-      <div className='new-astronaut-form'>
-        <h1 className='title'>New Astronaut</h1>
+      <div className='new-mission-form'>
+        <h1 className='title'>New Mission</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label htmlFor="astronautName" className="form-label">Astronaut Name</label>
+            <label htmlFor="missionName" className="form-label">Mission Name</label>
             <input type="text" className="form-control" 
               name="name" aria-describedby="nameHelp" 
               value={name} onChange={handleChange}
             />
-            <div id="namelHelp" className="form-text">It could be your favorite astronaut...</div>
+            <div id="namelHelp" className="form-text">It could be your favorite mission...</div>
           </div>
           <div className="mb-3">
-            <label htmlFor="astronautImage" className="form-label">Image Link</label>
+            <label htmlFor="missionDate" className="form-label">Mission Date</label>
             <input type="text" className="form-control" 
-              name="image" value={image} onChange={handleChange}
+              name="date" value={date} onChange={handleChange}
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="nationality" className="form-label">Nationality</label>
+            <label htmlFor="missionImage" className="form-label">Image Link</label>
             <input type="text" className="form-control" 
-              name="nationality" value={nationality}
+              name="image" value={image} onChange={handleChange}
+            />
+          </div>          
+          <div className="mb-3">
+            <label htmlFor="crew" className="form-label">Crew</label>
+            <input type="text" className="form-control" 
+              name="crew" value={crew} onChange={handleChange}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="space_shuttle" className="form-label">Space Shuttle</label>
+            <input type="text" className="form-control" 
+              name="space_shuttle" value={space_shuttle}
               onChange={handleChange}
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="missions" className="form-label">Missions</label>
+            <label htmlFor="country" className="form-label">Country</label>
             <input type="text" className="form-control" 
-              name="missions" value={missions} onChange={handleChange}
+              name="country" value={country}
+              onChange={handleChange}
             />
           </div>
           <div className="mb-3 form-check">

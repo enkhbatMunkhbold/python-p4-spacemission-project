@@ -1,5 +1,5 @@
 .create {
-  padding: 4rem;
+  padding: 5px;
 }
 
 div.create:before {
@@ -9,27 +9,27 @@ div.create:before {
   left: 0;
   top: 0;
   width: 100%;
-  height: 93vh;
+  height: 100%;
   opacity: 0.4;
-  background-image: url('../../public/apollo-11.jpg');
+  background-image: url('../../public/images/apollo-11.jpg');
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
   pointer-events: none;
 }
 
-div.new-astronaut-form {
+div.new-mission-form {
   height: 80%;
   display: flex;
   text-align: left;
 }
 
-.new-astronaut-form h1 {
+.new-mission-form h1 {
   margin-bottom: 1rem;
   text-align: center;
 }
 
-.new-astronaut-form {
+.new-mission-form {
   display: flex;
   flex-direction: column;
   padding: 2rem 1rem;
@@ -43,7 +43,7 @@ input.form-input {
   margin-bottom: 3rem;
 }
 
-.new-astronaut-form button {
+.new-mission-form button {
   width: 150px;
 }
 

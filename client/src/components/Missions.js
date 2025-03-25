@@ -1,29 +1,27 @@
-import React, { useEffect } from 'react'
+import React from 'react'
+import Mission from './Mission';
 import '../stylesheets/app.css'
 
-const Missions = ({ missions, setMissions }) => {
-
-  useEffect(() => {
-    fetch('/missions')
-    .then(data => data.json())
-    .then(setMissions)
-  }, [setMissions]);
+const Missions = ({ missions, onUpdateList }) => {
 
   function renderMissionsList(list) {
-    return list.map(element => {
-      return <li key={element.id}>{element.name}</li>
+    return list.map(mission => {
+      return (
+        <Mission key={mission.id}
+          mission = {mission}
+          onUpdateList={onUpdateList}
+        />
+      )
     })
   }
 
   return (
     <div className="component">
-      <div class="container text-center">
+      <div className="container text-center">
         <h1>Missions</h1>
         <hr className='border-line'/>
-        <div class='row justify-content-center'>
-          <div class='col-4 list'>
-            <ol>{renderMissionsList(missions)}</ol>
-          </div>
+        <div className='row justify-content-center'>
+          {renderMissionsList(missions)}
         </div>   
       </div>
     </div>   

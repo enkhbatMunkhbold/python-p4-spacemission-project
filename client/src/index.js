@@ -1,6 +1,6 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
-import { BrowserRouter } from 'react-router-dom';
+import ReactDOM from "react-dom/client";
+import reportWebVitals from "./reportWebVitals"
 import App from "./components/App";
 import "./stylesheets/index.css";
 
@@ -8,6 +8,11 @@ import "./stylesheets/index.css";
 // const root = createRoot(container);
 // root.render(<App />);
 
-const root = document.getElementById('root')
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
-createRoot(root).render(<BrowserRouter><App /></BrowserRouter>)
+reportWebVitals();
