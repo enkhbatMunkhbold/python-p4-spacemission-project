@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "../stylesheets/create.css"
 
 const Create = ({ onAddMission }) => {
-  const initialNewMission = { name: '', date: '', image: '', crew: [], space_shuttle: '', country: '', isInService: true}
+  const initialNewMission = { name: '', date: '', image: '', crew: [], space_shuttle: '', country: '', isFavorite: false}
   const [ newMission, setNewMission ]= useState(initialNewMission)
   
   const { name, date, image, crew, space_shuttle, country } = newMission
@@ -26,7 +26,7 @@ const Create = ({ onAddMission }) => {
       crew: newMission.crew,
       space_shuttle: newMission.space_shuttle,
       country: newMission.country,
-      isInService: newMission.isInService
+      isFavorite: newMission.isFavorite
     }
     fetch('/missions', {
       method: 'POST',
@@ -90,9 +90,9 @@ const Create = ({ onAddMission }) => {
           </div>
           <div className="mb-3 form-check">
             <input type="checkbox" className="form-check-input" 
-              name="isInService" onChange={handleCheck}
+              name="isFavorite" onChange={handleCheck}
             />
-            <label className="form-check-label" htmlFor="isInService">In Service</label>
+            <label className="form-check-label" htmlFor="isFavorite">Favorite</label>
           </div>
           <button type="submit" className="btn btn-light">Submit</button>
         </form>

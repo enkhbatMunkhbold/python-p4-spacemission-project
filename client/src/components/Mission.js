@@ -5,7 +5,7 @@ import "../stylesheets/mission.css"
 const Mission = ({ mission, onUpdateList }) => {
 
   const navigate = useNavigate()
-  const { id, date, image, space_shuttle, country, isInService } = mission  
+  const { id, date, image, space_shuttle, country, isFavorite } = mission  
   
   function handleFavoriteClick() {    
     fetch(`/missions/${id}`, {
@@ -13,7 +13,7 @@ const Mission = ({ mission, onUpdateList }) => {
       headers: {
         "Content-Type": "Application/JSON"
       },
-      body: JSON.stringify({isInService: !isInService})
+      body: JSON.stringify({isFavorite: !isFavorite})
     }).then(res => res.json())
     .then(data => {
       onUpdateList(data)
@@ -37,7 +37,7 @@ const Mission = ({ mission, onUpdateList }) => {
           </div>
           <div className="favorite-group">
             <div className="favorite-group-icon">
-              {isInService? 
+              {isFavorite? 
                 ( <i className="bi bi-heart-fill" onClick={handleFavoriteClick}></i>) : 
                 ( <i className="bi bi-heart" onClick={handleFavoriteClick}></i>)
               }

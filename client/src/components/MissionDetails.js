@@ -7,7 +7,7 @@ const MissionDetails = () => {
   const params = useParams();
   const missionId = params.id;
   const [mission, setMission] = useState({ crew: []})
-  const { name, date, image, crew, space_shuttle, country, isInService } = mission 
+  const { name, date, image, crew, space_shuttle, country, isFavorite } = mission 
 
   
   useEffect(() => {
@@ -22,7 +22,7 @@ const MissionDetails = () => {
     })
   }
 
-  // console.log("Mission Image:", image)
+  console.log("Mission Image:", image)
   // console.log('Crew:', crew)
   
   return (
@@ -38,8 +38,8 @@ const MissionDetails = () => {
             <p><span>Date:</span> {date}</p> 
             <p><span>Crew:</span></p>
             {crew.length > 0 ? <ul>{displayCrew(crew)}</ul> : <p>No crew data available</p>} 
-            <p><span>Is in Service:</span>
-              {isInService ? <i className="bi bi-hand-thumbs-up-fill"></i> : 
+            <p><span>Is Mission Your Favorite:</span>
+              {isFavorite ? <i className="bi bi-hand-thumbs-up-fill"></i> : 
                 <i className="bi bi-hand-thumbs-down"></i>}
             </p>             
           </div>
