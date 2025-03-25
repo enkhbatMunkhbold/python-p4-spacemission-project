@@ -21,9 +21,6 @@ const MissionDetails = () => {
       return <li key={index}>{astronaut}</li>
     })
   }
-
-  console.log("Mission Image:", image)
-  // console.log('Crew:', crew)
   
   return (
     <div className='details container'>

@@ -8,7 +8,8 @@ const Create = ({ onAddMission }) => {
   const { name, date, image, crew, space_shuttle, country } = newMission
 
   function handleChange(e) {
-    const { name, value } = e.target
+    let { name, value } = e.target
+    value = name === 'crew' ? value.split(',') : value
     setNewMission({...newMission, [name]: value})
   }
 
@@ -49,7 +50,7 @@ const Create = ({ onAddMission }) => {
         <h1 className='title'>New Mission</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label htmlFor="missionName" className="form-label">Mission Name</label>
+            <label htmlFor="missionName" className="form-label">Name</label>
             <input type="text" className="form-control" 
               name="name" aria-describedby="nameHelp" 
               value={name} onChange={handleChange}
@@ -57,7 +58,7 @@ const Create = ({ onAddMission }) => {
             <div id="namelHelp" className="form-text">It could be your favorite mission...</div>
           </div>
           <div className="mb-3">
-            <label htmlFor="missionDate" className="form-label">Mission Date</label>
+            <label htmlFor="missionDate" className="form-label">Date</label>
             <input type="text" className="form-control" 
               name="date" value={date} onChange={handleChange}
             />
