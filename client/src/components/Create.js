@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "../stylesheets/create.css"
 
-const Create = ({ onAddMission }) => {
+const Create = ({ onAddMission, onAddCrew }) => {
   const initialNewMission = { name: '', date: '', image: '', crew: [], space_shuttle: '', country: '', isFavorite: false}
   const [ newMission, setNewMission ]= useState(initialNewMission)
   
@@ -37,10 +37,17 @@ const Create = ({ onAddMission }) => {
       body: JSON.stringify(missionData)
     })
      .then(res => res.json())
-     .then(mission => {
-        console.log(mission)
-        onAddMission(mission)
-      })
+     .then(onAddMission)    
+
+    fetch('/astronauts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(missionData.crew)
+    })
+    .then(res => res.json())
+    .then(onAddCrew)
     setNewMission(initialNewMission)
   }
 

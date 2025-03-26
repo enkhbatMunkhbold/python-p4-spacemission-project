@@ -19,7 +19,7 @@ function App() {
     .then(data => setMissions(data));
   }, []);
 
-  function handleUpdateList(updatedMission) {
+  function handleUpdateMissions(updatedMission) {
     const updatedList = missions.map(mission => mission.id === updatedMission.id ? updatedMission : mission)
     setMissions(updatedList)
   }
@@ -28,16 +28,33 @@ function App() {
     setMissions([...missions, data])
   } 
 
+  function handleUpdateAstronauts(updatedAstronaut) {
+    const updatedList = astronauts.map(astronaut => astronaut.id === updatedAstronaut.id ? updatedAstronaut : astronaut)
+    setAstronauts(updatedList)
+  }
+
+  function handleAddAstronaut(data) {
+    setAstronauts([...astronauts, data])
+  } 
+
+
 
   return (
     <div className="App"> 
       <Router>
         <Navbar/>
         <Routes>
-          <Route path="/" element={ <Home missions={missions} onUpdateList={handleUpdateList}/>}/>
-          <Route path="/missions" element={ <Missions missions={missions} onUpdateList={handleUpdateList}/>}/>        
-          <Route path="/astronauts" element={ <Astronauts astronauts={astronauts} setAstronauts={setAstronauts}/>}/>
-          <Route path="/missions/new" element={<Create onAddMission={handleAddMission}/>} />
+          <Route path="/" element={ <Home missions={missions} onUpdateList={handleUpdateMissions}/>}/>
+          <Route path="/missions" element={ <Missions missions={missions} onUpdateList={handleUpdateMissions}/>}/>        
+          <Route path="/astronauts" element={ 
+            <Astronauts astronauts={astronauts} 
+              setAstronauts={setAstronauts} 
+              onUpdateAstronauts={handleUpdateAstronauts}
+            />}/>
+          <Route path="/missions/new" element={
+            <Create onAddMission={handleAddMission} 
+              onAddAstronaut={handleAddAstronaut}
+            />} />
           <Route path="/missions/:id" element={ <MissionDetails/>}/>
         </Routes>      
       </Router>       

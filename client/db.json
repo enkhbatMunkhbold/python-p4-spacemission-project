@@ -288,438 +288,263 @@
   "astronauts": [
     {
       "id": "1",
-      "name": "Loren Shriver",
-      "image_link": "https://example.com/loren_shriver.jpg",
-      "nationality": "American",
-      "missions": [
-        "STS-31"
-      ]
+      "name": "Yuri Gagarin",
+      "missions": ["Vostok 1"]
     },
     {
       "id": "2",
-      "name": "Charles Bolden",
-      "image_link": "https://example.com/charles_bolden.jpg",
-      "nationality": "American",
-      "missions": [
-        "STS-31"
-      ]
+      "name": "Alan Shepard",
+      "missions": ["Mercury-Redstone 3"]
     },
     {
       "id": "3",
-      "name": "Steven Hawley",
-      "image_link": "https://example.com/steven_hawley.jpg",
-      "nationality": "American",
-      "missions": [
-        "STS-31"
-      ]
+      "name": "James McDivitt",
+      "missions": ["Gemini 4"]
     },
     {
       "id": "4",
-      "name": "Gordon Cooper",
-      "image_link": "https://example.com/gordon_cooper.jpg",
-      "nationality": "American",
-      "missions": [
-        "Mercury-Atlas 9"
-      ]
+      "name": "Ed White",
+      "missions": ["Gemini 4"]
     },
     {
       "id": "5",
-      "name": "Valentina Tereshkova",
-      "image_link": "https://example.com/valentina_tereshkova.jpg",
-      "nationality": "Soviet",
-      "missions": [
-        "Vostok 6"
-      ]
+      "name": "Neil Armstrong",
+      "missions": ["Apollo 11"]
     },
     {
       "id": "6",
-      "name": "John Glenn",
-      "image_link": "https://example.com/john_glenn.jpg",
-      "nationality": "American",
-      "missions": [
-        "Mercury-Atlas 6"
-      ]
+      "name": "Buzz Aldrin",
+      "missions": ["Apollo 11", "Gemini 12"]
     },
     {
       "id": "7",
-      "name": "Wally Schirra",
-      "image_link": "https://example.com/wally_schirra.jpg",
-      "nationality": "American",
-      "missions": [
-        "Gemini 6A"
-      ]
+      "name": "Michael Collins",
+      "missions": ["Apollo 11"]
     },
     {
       "id": "8",
-      "name": "Tom Stafford",
-      "image_link": "https://example.com/tom_stafford.jpg",
-      "nationality": "American",
-      "missions": [
-        "Gemini 6A"
-      ]
+      "name": "Georgi Dobrovolski",
+      "missions": ["Soyuz 11"]
     },
     {
       "id": "9",
-      "name": "Jing Haipeng",
-      "image_link": "https://example.com/jing_haipeng.jpg",
-      "nationality": "Chinese",
-      "missions": [
-        "Shenzhou 9"
-      ]
+      "name": "Viktor Patsayev",
+      "missions": ["Soyuz 11"]
     },
     {
       "id": "10",
-      "name": "Liu Wang",
-      "image_link": "https://example.com/liu_wang.jpg",
-      "nationality": "Chinese",
-      "missions": [
-        "Shenzhou 9"
-      ]
+      "name": "Vladislav Volkov",
+      "missions": ["Soyuz 11"]
     },
     {
       "id": "11",
-      "name": "Liu Yang",
-      "image_link": "https://example.com/liu_yang.jpg",
-      "nationality": "Chinese",
-      "missions": [
-        "Shenzhou 9"
-      ]
+      "name": "John Young",
+      "missions": ["STS-1"]
     },
     {
       "id": "12",
-      "name": "Alexey Ovchinin",
-      "image_link": "https://example.com/alexey_ovchinin.jpg",
-      "nationality": "Russian",
-      "missions": [
-        "Soyuz MS-10"
-      ]
+      "name": "Robert Crippen",
+      "missions": ["STS-1"]
     },
     {
       "id": "13",
-      "name": "Nick Hague",
-      "image_link": "https://example.com/nick_hague.jpg",
-      "nationality": "American",
-      "missions": [
-        "Soyuz MS-10"
-      ]
+      "name": "Loren Shriver",
+      "missions": ["STS-31"]
     },
     {
       "id": "14",
-      "name": "Jim Lovell",
-      "image_link": "https://example.com/jim_lovell.jpg",
-      "nationality": "American",
-      "missions": [
-        "Apollo 13",
-        "Gemini 12",
-        "Apollo 8"
-      ]
+      "name": "Charles Bolden",
+      "missions": ["STS-31"]
     },
     {
       "id": "15",
-      "name": "Jack Swigert",
-      "image_link": "https://example.com/jack_swigert.jpg",
-      "nationality": "American",
-      "missions": [
-        "Apollo 13"
-      ]
+      "name": "Steven Hawley",
+      "missions": ["STS-31"]
     },
     {
       "id": "16",
-      "name": "Fred Haise",
-      "image_link": "https://example.com/fred_haise.jpg",
-      "nationality": "American",
-      "missions": [
-        "Apollo 13"
-      ]
+      "name": "Yang Liwei",
+      "missions": ["Shenzhou 5"]
     },
     {
       "id": "17",
-      "name": "Reid Wiseman",
-      "image_link": "https://example.com/reid_wiseman.jpg",
-      "nationality": "American",
-      "missions": [
-        "Artemis II"
-      ]
+      "name": "Doug Hurley",
+      "missions": ["Crew Dragon Demo-2"]
     },
     {
       "id": "18",
-      "name": "Victor Glover",
-      "image_link": "https://example.com/victor_glover.jpg",
-      "nationality": "American",
-      "missions": [
-        "Artemis II",
-        "Crew-1"
-      ]
+      "name": "Bob Behnken",
+      "missions": ["Crew Dragon Demo-2"]
     },
     {
       "id": "19",
-      "name": "Christina Koch",
-      "image_link": "https://example.com/christina_koch.jpg",
-      "nationality": "American",
-      "missions": [
-        "Artemis II"
-      ]
+      "name": "Frank Borman",
+      "missions": ["Apollo 8"]
     },
     {
       "id": "20",
-      "name": "Jeremy Hansen",
-      "image_link": "https://example.com/jeremy_hansen.jpg",
-      "nationality": "Canadian",
-      "missions": [
-        "Artemis II"
-      ]
+      "name": "Jim Lovell",
+      "missions": ["Apollo 8", "Gemini 12"]
     },
     {
       "id": "21",
-      "name": "Buzz Aldrin",
-      "image_link": "https://example.com/buzz_aldrin.jpg",
-      "nationality": "American",
-      "missions": [
-        "Apollo 11",
-        "Gemini 12"
-      ]
+      "name": "William Anders",
+      "missions": ["Apollo 8"]
     },
     {
       "id": "22",
-      "name": "Yang Liwei",
-      "image_link": "https://example.com/yang_liwei.jpg",
-      "nationality": "Chinese",
-      "missions": [
-        "Shenzhou 5"
-      ]
+      "name": "Vance Brand",
+      "missions": ["STS-41B"]
     },
     {
       "id": "23",
-      "name": "Alan Shepard",
-      "image_link": "https://example.com/alan_shepard.jpg",
-      "nationality": "American",
-      "missions": [
-        "Mercury-Redstone 3"
-      ]
+      "name": "Robert Gibson",
+      "missions": ["STS-41B"]
     },
     {
       "id": "24",
-      "name": "Neil Armstrong",
-      "image_link": "https://example.com/neil_armstrong.jpg",
-      "nationality": "American",
-      "missions": [
-        "Apollo 11"
-      ]
+      "name": "Bruce McCandless",
+      "missions": ["STS-41B"]
     },
     {
       "id": "25",
-      "name": "Michael Collins",
-      "image_link": "https://example.com/michael_collins.jpg",
-      "nationality": "American",
-      "missions": [
-        "Apollo 11"
-      ]
+      "name": "Alexey Ovchinin",
+      "missions": ["Soyuz MS-10"]
     },
     {
       "id": "26",
-      "name": "Michael Hopkins",
-      "image_link": "https://example.com/michael_hopkins.jpg",
-      "nationality": "American",
-      "missions": [
-        "Crew-1"
-      ]
+      "name": "Nick Hague",
+      "missions": ["Soyuz MS-10"]
     },
     {
       "id": "27",
-      "name": "Soichi Noguchi",
-      "image_link": "https://example.com/soichi_noguchi.jpg",
-      "nationality": "Japanese",
-      "missions": [
-        "Crew-1"
-      ]
+      "name": "William Shepherd",
+      "missions": ["Expedition 1"]
     },
     {
       "id": "28",
-      "name": "Shannon Walker",
-      "image_link": "https://example.com/shannon_walker.jpg",
-      "nationality": "American",
-      "missions": [
-        "Crew-1"
-      ]
+      "name": "Sergei Krikalev",
+      "missions": ["Expedition 1"]
     },
     {
       "id": "29",
-      "name": "Sergey Prokopyev",
-      "image_link": "https://example.com/sergey_prokopyev.jpg",
-      "nationality": "Russian",
-      "missions": [
-        "Expedition 69"
-      ]
+      "name": "Yuri Gidzenko",
+      "missions": ["Expedition 1"]
     },
     {
       "id": "30",
-      "name": "Frank Rubio",
-      "image_link": "https://example.com/frank_rubio.jpg",
-      "nationality": "American",
-      "missions": [
-        "Expedition 69"
-      ]
+      "name": "Sergey Prokopyev",
+      "missions": ["Expedition 69"]
     },
     {
       "id": "31",
-      "name": "Sergei Krikalev",
-      "image_link": "https://example.com/sergei_krikalev.jpg",
-      "nationality": "Russian",
-      "missions": [
-        "Expedition 1"
-      ]
+      "name": "Dmitry Petelin",
+      "missions": ["Expedition 69"]
     },
     {
       "id": "32",
-      "name": "Yuri Gidzenko",
-      "image_link": "https://example.com/yuri_gidzenko.jpg",
-      "nationality": "Russian",
-      "missions": [
-        "Expedition 1"
-      ]
+      "name": "Frank Rubio",
+      "missions": ["Expedition 69"]
     },
     {
       "id": "33",
-      "name": "William Shepherd",
-      "image_link": "https://example.com/william_shepherd.jpg",
-      "nationality": "American",
-      "missions": [
-        "Expedition 1"
-      ]
+      "name": "Jim Lovell",
+      "missions": ["Apollo 13"]
     },
     {
       "id": "34",
-      "name": "Peggy Whitson",
-      "image_link": "https://example.com/peggy_whitson.jpg",
-      "nationality": "American",
-      "missions": [
-        "Expedition 50"
-      ]
+      "name": "Jack Swigert",
+      "missions": ["Apollo 13"]
     },
     {
       "id": "35",
-      "name": "Nicole Mann",
-      "image_link": "https://example.com/nicole_mann.jpg",
-      "nationality": "American",
-      "missions": [
-        "Crew-5"
-      ]
+      "name": "Fred Haise",
+      "missions": ["Apollo 13"]
     },
     {
       "id": "36",
-      "name": "Josh Cassada",
-      "image_link": "https://example.com/josh_cassada.jpg",
-      "nationality": "American",
-      "missions": [
-        "Crew-5"
-      ]
+      "name": "Francis Scobee",
+      "missions": ["STS-51-L"]
     },
     {
       "id": "37",
-      "name": "Koichi Wakata",
-      "image_link": "https://example.com/koichi_wakata.jpg",
-      "nationality": "Japanese",
-      "missions": [
-        "Crew-5"
-      ]
+      "name": "Michael Smith",
+      "missions": ["STS-51-L"]
     },
     {
       "id": "38",
-      "name": "Anna Kikina",
-      "image_link": "https://example.com/anna_kikina.jpg",
-      "nationality": "Russian",
-      "missions": [
-        "Crew-5"
-      ]
+      "name": "Ronald McNair",
+      "missions": ["STS-51-L"]
     },
     {
       "id": "39",
-      "name": "Yuri Gagarin",
-      "image_link": "https://example.com/yuri_gagarin.jpg",
-      "nationality": "Soviet",
-      "missions": [
-        "Vostok 1"
-      ]
+      "name": "Ellison Onizuka",
+      "missions": ["STS-51-L"]
     },
     {
       "id": "40",
-      "name": "Georgi Dobrovolski",
-      "image_link": "https://example.com/georgi_dobrovolski.jpg",
-      "nationality": "Soviet",
-      "missions": [
-        "Soyuz 11"
-      ]
+      "name": "Judith Resnik",
+      "missions": ["STS-51-L"]
     },
     {
       "id": "41",
-      "name": "Viktor Patsayev",
-      "image_link": "https://example.com/viktor_patsayev.jpg",
-      "nationality": "Soviet",
-      "missions": [
-        "Soyuz 11"
-      ]
+      "name": "Gregory Jarvis",
+      "missions": ["STS-51-L"]
     },
     {
       "id": "42",
-      "name": "Vladislav Volkov",
-      "image_link": "https://example.com/vladislav_volkov.jpg",
-      "nationality": "Soviet",
-      "missions": [
-        "Soyuz 11"
-      ]
+      "name": "Christa McAuliffe",
+      "missions": ["STS-51-L"]
     },
     {
       "id": "43",
-      "name": "Dmitry Petelin",
-      "image_link": "https://example.com/dmitry_petelin.jpg",
-      "nationality": "Russian",
-      "missions": [
-        "Expedition 69"
-      ]
+      "name": "Jing Haipeng",
+      "missions": ["Shenzhou 9"]
     },
     {
       "id": "44",
-      "name": "Bruce McCandless",
-      "image_link": "https://example.com/bruce_mccandless.jpg",
-      "nationality": "American",
-      "missions": [
-        "STS-41B"
-      ]
+      "name": "Liu Wang",
+      "missions": ["Shenzhou 9"]
     },
     {
       "id": "45",
-      "name": "Vance Brand",
-      "image_link": "https://example.com/vance_brand.jpg",
-      "nationality": "American",
-      "missions": [
-        "STS-41B"
-      ]
+      "name": "Liu Yang",
+      "missions": ["Shenzhou 9"]
     },
     {
       "id": "46",
-      "name": "Robert Gibson",
-      "image_link": "https://example.com/robert_gibson.jpg",
-      "nationality": "American",
-      "missions": [
-        "STS-41B"
-      ]
+      "name": "Reid Wiseman",
+      "missions": ["Artemis II"]
     },
     {
       "id": "47",
-      "name": "Tang Hongbo",
-      "image_link": "https://example.com/tang_hongbo.jpg",
-      "nationality": "Chinese",
-      "missions": [
-        "Shenzhou 12"
-      ]
+      "name": "Victor Glover",
+      "missions": ["Artemis II"]
     },
     {
-      "id": "1e75",
-      "name": "",
-      "image": "",
-      "nationality": "",
-      "isInService": true,
-      "missions": []
+      "id": "48",
+      "name": "Christina Koch",
+      "missions": ["Artemis II"]
+    },
+    {
+      "id": "49",
+      "name": "Jeremy Hansen",
+      "missions": ["Artemis II"]
+    },
+    {
+      "id": "50",
+      "name": "Jessica Watkins",
+      "missions": ["Lunar Gateway"]
+    },
+    {
+      "id": "51",
+      "name": "Josh Kutryk",
+      "missions": ["Lunar Gateway"]
+    },
+    {
+      "id": "52",
+      "name": "Tom Marshburn",
+      "missions": ["Lunar Gateway"]
     }
   ]
 }
