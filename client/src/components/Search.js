@@ -9,13 +9,14 @@ const Search = ({ onSearch }) => {
     setSearchInput(e.target.value)
   }
 
-  function handleClick() {
+  function handleClick() {    
     onSearch(searchInput)
+    setSearchInput('')
   }
 
   return (
     <div className="input-group searchbar">
-      <input type="search" className="form-control rounded" placeholder="Search for Space Mission..." aria-label="Search" aria-describedby="search-addon" onChange={handleChange}/>
+      <input type="search" className="form-control rounded" placeholder="Search for Space Mission..." aria-label="Search" aria-describedby="search-addon" value={searchInput} onChange={handleChange}/>
       <button className="btn btn-light" type="button" id="search-addon" onClick={handleClick}>Search</button>
     </div>
   )

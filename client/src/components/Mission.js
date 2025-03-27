@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import "../stylesheets/mission.css"
 
-const Mission = ({ mission, onUpdateList }) => {
+const Mission = ({ mission, onUpdateList, onRemoveMission }) => {
 
   const navigate = useNavigate()
   const { id, date, image, space_shuttle, country, isFavorite } = mission  
@@ -24,6 +24,14 @@ const Mission = ({ mission, onUpdateList }) => {
     navigate(`/missions/${id}`)
   }
 
+  function handleDelete() {
+    fetch(`/missions/${id}`, {
+      method: 'DELETE'
+    })
+    .then(res => res.json())
+    .then(() => onRemoveMission(mission))
+  }
+
   return (
     <div className='card position-relative'>
       <img src={image} alt={space_shuttle} />
@@ -34,6 +42,11 @@ const Mission = ({ mission, onUpdateList }) => {
         <div className="btn-toolbar justify-content-between" role="toolbar">
           <div className="btn-group" role="group" aria-label="button">
             <button className='btn btn-light' onClick={handleButtonClick}>More info...</button>
+          </div>
+          <div>
+            <button className="btn btn-light" onClick={handleDelete}>
+              <i className="bi bi-trash"></i>
+            </button>
           </div>
           <div className="favorite-group">
             <div className="favorite-group-icon">

@@ -34,9 +34,14 @@ function App() {
   }
 
   function handleAddAstronauts(data) {
-    const[first, ...rest] = data
+    // const[first, ...rest] = data
     setAstronauts([...astronauts, data])
   } 
+
+  function removeMission(deletedMission) {
+    const updatedMissions = missions.filter(mission => mission.id !== deletedMission.id)
+    setMissions(updatedMissions)
+  }
 
   return (
     <div className="App"> 
@@ -44,7 +49,11 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="/" element={ <Home missions={missions} onUpdateList={handleUpdateMissions}/>}/>
-          <Route path="/missions" element={ <Missions missions={missions} onUpdateList={handleUpdateMissions}/>}/>        
+          <Route path="/missions" element={ 
+            <Missions missions={missions} 
+              onUpdateList={handleUpdateMissions}
+              onRemoveMission={removeMission}
+            />}/>        
           <Route path="/astronauts" element={ 
             <Astronauts astronauts={astronauts} 
               setAstronauts={setAstronauts} 

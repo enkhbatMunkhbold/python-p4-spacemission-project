@@ -2,7 +2,7 @@ import React from 'react'
 import Mission from './Mission';
 import '../stylesheets/app.css'
 
-const Missions = ({ missions, onUpdateList }) => {
+const Missions = ({ missions, onUpdateList, onRemoveMission }) => {
 
   function renderMissionsList(list) {
     return list.map(mission => {
@@ -10,6 +10,7 @@ const Missions = ({ missions, onUpdateList }) => {
         <Mission key={mission.id}
           mission = {mission}
           onUpdateList={onUpdateList}
+          onRemoveMission={onRemoveMission}
         />
       )
     })

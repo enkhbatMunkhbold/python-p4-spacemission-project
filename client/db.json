@@ -289,262 +289,368 @@
     {
       "id": "1",
       "name": "Yuri Gagarin",
-      "missions": ["Vostok 1"]
+      "missions": [
+        "Vostok 1"
+      ]
     },
     {
       "id": "2",
       "name": "Alan Shepard",
-      "missions": ["Mercury-Redstone 3"]
+      "missions": [
+        "Mercury-Redstone 3"
+      ]
     },
     {
       "id": "3",
       "name": "James McDivitt",
-      "missions": ["Gemini 4"]
+      "missions": [
+        "Gemini 4"
+      ]
     },
     {
       "id": "4",
       "name": "Ed White",
-      "missions": ["Gemini 4"]
+      "missions": [
+        "Gemini 4"
+      ]
     },
     {
       "id": "5",
       "name": "Neil Armstrong",
-      "missions": ["Apollo 11"]
+      "missions": [
+        "Apollo 11"
+      ]
     },
     {
       "id": "6",
       "name": "Buzz Aldrin",
-      "missions": ["Apollo 11", "Gemini 12"]
+      "missions": [
+        "Apollo 11",
+        "Gemini 12"
+      ]
     },
     {
       "id": "7",
       "name": "Michael Collins",
-      "missions": ["Apollo 11"]
+      "missions": [
+        "Apollo 11"
+      ]
     },
     {
       "id": "8",
       "name": "Georgi Dobrovolski",
-      "missions": ["Soyuz 11"]
+      "missions": [
+        "Soyuz 11"
+      ]
     },
     {
       "id": "9",
       "name": "Viktor Patsayev",
-      "missions": ["Soyuz 11"]
+      "missions": [
+        "Soyuz 11"
+      ]
     },
     {
       "id": "10",
       "name": "Vladislav Volkov",
-      "missions": ["Soyuz 11"]
+      "missions": [
+        "Soyuz 11"
+      ]
     },
     {
       "id": "11",
       "name": "John Young",
-      "missions": ["STS-1"]
+      "missions": [
+        "STS-1"
+      ]
     },
     {
       "id": "12",
       "name": "Robert Crippen",
-      "missions": ["STS-1"]
+      "missions": [
+        "STS-1"
+      ]
     },
     {
       "id": "13",
       "name": "Loren Shriver",
-      "missions": ["STS-31"]
+      "missions": [
+        "STS-31"
+      ]
     },
     {
       "id": "14",
       "name": "Charles Bolden",
-      "missions": ["STS-31"]
+      "missions": [
+        "STS-31"
+      ]
     },
     {
       "id": "15",
       "name": "Steven Hawley",
-      "missions": ["STS-31"]
+      "missions": [
+        "STS-31"
+      ]
     },
     {
       "id": "16",
       "name": "Yang Liwei",
-      "missions": ["Shenzhou 5"]
+      "missions": [
+        "Shenzhou 5"
+      ]
     },
     {
       "id": "17",
       "name": "Doug Hurley",
-      "missions": ["Crew Dragon Demo-2"]
+      "missions": [
+        "Crew Dragon Demo-2"
+      ]
     },
     {
       "id": "18",
       "name": "Bob Behnken",
-      "missions": ["Crew Dragon Demo-2"]
+      "missions": [
+        "Crew Dragon Demo-2"
+      ]
     },
     {
       "id": "19",
       "name": "Frank Borman",
-      "missions": ["Apollo 8"]
+      "missions": [
+        "Apollo 8"
+      ]
     },
     {
       "id": "20",
       "name": "Jim Lovell",
-      "missions": ["Apollo 8", "Gemini 12"]
+      "missions": [
+        "Apollo 8",
+        "Gemini 12"
+      ]
     },
     {
       "id": "21",
       "name": "William Anders",
-      "missions": ["Apollo 8"]
+      "missions": [
+        "Apollo 8"
+      ]
     },
     {
       "id": "22",
       "name": "Vance Brand",
-      "missions": ["STS-41B"]
+      "missions": [
+        "STS-41B"
+      ]
     },
     {
       "id": "23",
       "name": "Robert Gibson",
-      "missions": ["STS-41B"]
+      "missions": [
+        "STS-41B"
+      ]
     },
     {
       "id": "24",
       "name": "Bruce McCandless",
-      "missions": ["STS-41B"]
+      "missions": [
+        "STS-41B"
+      ]
     },
     {
       "id": "25",
       "name": "Alexey Ovchinin",
-      "missions": ["Soyuz MS-10"]
+      "missions": [
+        "Soyuz MS-10"
+      ]
     },
     {
       "id": "26",
       "name": "Nick Hague",
-      "missions": ["Soyuz MS-10"]
+      "missions": [
+        "Soyuz MS-10"
+      ]
     },
     {
       "id": "27",
       "name": "William Shepherd",
-      "missions": ["Expedition 1"]
+      "missions": [
+        "Expedition 1"
+      ]
     },
     {
       "id": "28",
       "name": "Sergei Krikalev",
-      "missions": ["Expedition 1"]
+      "missions": [
+        "Expedition 1"
+      ]
     },
     {
       "id": "29",
       "name": "Yuri Gidzenko",
-      "missions": ["Expedition 1"]
+      "missions": [
+        "Expedition 1"
+      ]
     },
     {
       "id": "30",
       "name": "Sergey Prokopyev",
-      "missions": ["Expedition 69"]
+      "missions": [
+        "Expedition 69"
+      ]
     },
     {
       "id": "31",
       "name": "Dmitry Petelin",
-      "missions": ["Expedition 69"]
+      "missions": [
+        "Expedition 69"
+      ]
     },
     {
       "id": "32",
       "name": "Frank Rubio",
-      "missions": ["Expedition 69"]
+      "missions": [
+        "Expedition 69"
+      ]
     },
     {
       "id": "33",
       "name": "Jim Lovell",
-      "missions": ["Apollo 13"]
+      "missions": [
+        "Apollo 13"
+      ]
     },
     {
       "id": "34",
       "name": "Jack Swigert",
-      "missions": ["Apollo 13"]
+      "missions": [
+        "Apollo 13"
+      ]
     },
     {
       "id": "35",
       "name": "Fred Haise",
-      "missions": ["Apollo 13"]
+      "missions": [
+        "Apollo 13"
+      ]
     },
     {
       "id": "36",
       "name": "Francis Scobee",
-      "missions": ["STS-51-L"]
+      "missions": [
+        "STS-51-L"
+      ]
     },
     {
       "id": "37",
       "name": "Michael Smith",
-      "missions": ["STS-51-L"]
+      "missions": [
+        "STS-51-L"
+      ]
     },
     {
       "id": "38",
       "name": "Ronald McNair",
-      "missions": ["STS-51-L"]
+      "missions": [
+        "STS-51-L"
+      ]
     },
     {
       "id": "39",
       "name": "Ellison Onizuka",
-      "missions": ["STS-51-L"]
+      "missions": [
+        "STS-51-L"
+      ]
     },
     {
       "id": "40",
       "name": "Judith Resnik",
-      "missions": ["STS-51-L"]
+      "missions": [
+        "STS-51-L"
+      ]
     },
     {
       "id": "41",
       "name": "Gregory Jarvis",
-      "missions": ["STS-51-L"]
+      "missions": [
+        "STS-51-L"
+      ]
     },
     {
       "id": "42",
       "name": "Christa McAuliffe",
-      "missions": ["STS-51-L"]
+      "missions": [
+        "STS-51-L"
+      ]
     },
     {
       "id": "43",
       "name": "Jing Haipeng",
-      "missions": ["Shenzhou 9"]
+      "missions": [
+        "Shenzhou 9"
+      ]
     },
     {
       "id": "44",
       "name": "Liu Wang",
-      "missions": ["Shenzhou 9"]
+      "missions": [
+        "Shenzhou 9"
+      ]
     },
     {
       "id": "45",
       "name": "Liu Yang",
-      "missions": ["Shenzhou 9"]
+      "missions": [
+        "Shenzhou 9"
+      ]
     },
     {
       "id": "46",
       "name": "Reid Wiseman",
-      "missions": ["Artemis II"]
+      "missions": [
+        "Artemis II"
+      ]
     },
     {
       "id": "47",
       "name": "Victor Glover",
-      "missions": ["Artemis II"]
+      "missions": [
+        "Artemis II"
+      ]
     },
     {
       "id": "48",
       "name": "Christina Koch",
-      "missions": ["Artemis II"]
+      "missions": [
+        "Artemis II"
+      ]
     },
     {
       "id": "49",
       "name": "Jeremy Hansen",
-      "missions": ["Artemis II"]
+      "missions": [
+        "Artemis II"
+      ]
     },
     {
       "id": "50",
       "name": "Jessica Watkins",
-      "missions": ["Lunar Gateway"]
+      "missions": [
+        "Lunar Gateway"
+      ]
     },
     {
       "id": "51",
       "name": "Josh Kutryk",
-      "missions": ["Lunar Gateway"]
+      "missions": [
+        "Lunar Gateway"
+      ]
     },
     {
       "id": "52",
       "name": "Tom Marshburn",
-      "missions": ["Lunar Gateway"]
+      "missions": [
+        "Lunar Gateway"
+      ]
     }
   ]
 }
