@@ -1,16 +1,30 @@
 import React, { useState } from 'react'
 import "../stylesheets/create.css"
 
-const Create = ({ onAddMission, onAddCrew }) => {
+const Create = ({ onAddMission, onAddCrew, astronauts }) => {
   const initialNewMission = { name: '', date: '', image: '', crew: [], space_shuttle: '', country: '', isFavorite: false}
   const [ newMission, setNewMission ]= useState(initialNewMission)
   
   const { name, date, image, crew, space_shuttle, country } = newMission
-
+  let newAstronautObjects = {}
   function handleChange(e) {
     let { name, value } = e.target
-    value = name === 'crew' ? value.split(',') : value
+    // value = name === 'crew' ? value.split(',') : value
     setNewMission({...newMission, [name]: value})
+  }
+
+  function handleCrewChange(e) {
+    const crewNames = e.target.value.split(',')
+    const astronautNames = astronauts.map(([ name ]) => name)    
+    for( let astronaut of crewNames ) {
+      if(!astronautNames.includes(astronaut)){
+        newAstronautObjects.push({ name: astronaut, missions: [name]})
+      //   let newAstronaut = { name: astronaut, missions: name }
+      //   astronauts.push(newAstronaut)
+      // } else {
+      //   astronauts.map(astro => astro.name === astronaut ? astro.missions.push(name) : astro)
+      }
+    }
   }
 
   function handleCheck(e) {
@@ -37,17 +51,17 @@ const Create = ({ onAddMission, onAddCrew }) => {
       body: JSON.stringify(missionData)
     })
      .then(res => res.json())
-     .then(onAddMission)    
+     .then(onAddMission) 
 
     fetch('/astronauts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(missionData.crew)
+      body: JSON.stringify(newAstronautObjects)
     })
-    .then(res => res.json())
-    .then(onAddCrew)
+      .then(res => res.json())
+      .then(onAddCrew)
     setNewMission(initialNewMission)
   }
 
@@ -79,7 +93,7 @@ const Create = ({ onAddMission, onAddCrew }) => {
           <div className="mb-3">
             <label htmlFor="crew" className="form-label">Crew</label>
             <input type="text" className="form-control" 
-              name="crew" value={crew} onChange={handleChange}
+              name="crew" value={crew} onChange={handleCrewChange}
             />
           </div>
           <div className="mb-3">

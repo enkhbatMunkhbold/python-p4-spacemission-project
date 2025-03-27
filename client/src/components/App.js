@@ -33,11 +33,10 @@ function App() {
     setAstronauts(updatedList)
   }
 
-  function handleAddAstronaut(data) {
+  function handleAddAstronauts(data) {
+    const[first, ...rest] = data
     setAstronauts([...astronauts, data])
   } 
-
-
 
   return (
     <div className="App"> 
@@ -53,7 +52,8 @@ function App() {
             />}/>
           <Route path="/missions/new" element={
             <Create onAddMission={handleAddMission} 
-              onAddAstronaut={handleAddAstronaut}
+              onAddAstronauts={handleAddAstronauts}
+              astronauts={astronauts}
             />} />
           <Route path="/missions/:id" element={ <MissionDetails/>}/>
         </Routes>      
