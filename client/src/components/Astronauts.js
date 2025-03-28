@@ -1,18 +1,18 @@
-import React, { useEffect } from 'react'
+import React from 'react'
+import Astronaut from './Astronaut'
 import '../stylesheets/app.css'
 
-const Astronauts = ({ astronauts, setAstronauts }) => {
-
-  useEffect(() => {
-      fetch('/astronauts')
-      .then(data => data.json())
-      .then(setAstronauts)
-    }, [setAstronauts]);
+const Astronauts = ({ astronauts, onUpdateList, onRemoveAstronaut }) => {
   
-
   function renderAstronautsList(list) {
-    return list.map(element => {
-      return <li key={element.id}>{element.name}</li>
+    return list.map(astro => {
+      return (
+        <Astronaut key={astronauts.id}
+          astronaut={astro}
+          onUpdateList={onUpdateList}
+          onRemoveAstronaut={onRemoveAstronaut}
+        />
+      )
     })
   }
 
@@ -22,9 +22,7 @@ const Astronauts = ({ astronauts, setAstronauts }) => {
         <h1>Astronauts</h1>
         <hr className='border-line'/>
         <div className='row justify-content-center'>
-          <div className='col-4 list'>
-            <ol>{renderAstronautsList(astronauts)}</ol>
-          </div>
+          {renderAstronautsList(astronauts)}
         </div>   
       </div>
     </div>   

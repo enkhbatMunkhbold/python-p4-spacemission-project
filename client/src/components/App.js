@@ -19,6 +19,12 @@ function App() {
     .then(data => setMissions(data));
   }, []);
 
+  useEffect(() => {
+    fetch('/astronauts')
+    .then(data => data.json())
+    .then(setAstronauts)
+  }, [setAstronauts]);
+
   function handleUpdateMissions(updatedMission) {
     const updatedList = missions.map(mission => mission.id === updatedMission.id ? updatedMission : mission)
     setMissions(updatedList)
@@ -56,7 +62,6 @@ function App() {
             />}/>        
           <Route path="/astronauts" element={ 
             <Astronauts astronauts={astronauts} 
-              setAstronauts={setAstronauts} 
               onUpdateAstronauts={handleUpdateAstronauts}
             />}/>
           <Route path="/missions/new" element={

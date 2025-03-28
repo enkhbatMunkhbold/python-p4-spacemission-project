@@ -24,24 +24,6 @@
   text-align: right;
 }
 
-/* .card button {
-  margin-top: 0.5rem;
-}
-
-button {
-  padding: 0.25rem 1rem;
-  font-family: inherit;
-  font-size: smaller;
-  border: none;
-  cursor: pointer;
-  width: 8rem;
-}
-
-button.primary {
-  background-color: var(--orange);
-  color: white;
-} */
-
 @media (min-width: 768px) {
   .cards {
     display: flex;
@@ -63,4 +45,9 @@ button.primary {
   .card {
     width: calc(20% - 2rem);
   }
+}
+
+span{
+  font-weight: bolder;
+  font-size: large;
 }

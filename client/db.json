@@ -298,7 +298,8 @@
       "name": "Alan Shepard",
       "missions": [
         "Mercury-Redstone 3"
-      ]
+      ],
+      "isInService": true
     },
     {
       "id": "3",
