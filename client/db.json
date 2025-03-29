@@ -269,6 +269,36 @@
       "space_shuttle": "Orion",
       "country": "USA",
       "isFavorite": false
+    },
+    {
+      "id": "df3d",
+      "name": "STS-61",
+      "date": "12/02/1993",
+      "image": "../images/sts61.jpg",
+      "crew": [
+        "John W. Young",
+        "Story Musgrave",
+        "Jeffrey Hoffman",
+        "Richard Hieb",
+        "Claude Nicollier",
+        "Kathryn Thornton"
+      ],
+      "space_shuttle": "Endeavour",
+      "country": "USA",
+      "isFavorite": false
+    },
+    {
+      "id": "7ff4",
+      "name": "Lunar Discovery",
+      "date": "07/30/2030",
+      "image": "../images/lunar_discovery.jpg",
+      "crew": [
+        "John Carter",
+        "Samantha Lee"
+      ],
+      "space_shuttle": "Orion-2",
+      "country": "USA",
+      "isFavorite": true
     }
   ],
   "astronauts": [
@@ -741,6 +771,70 @@
       ],
       "country": "USA",
       "isInService": false
+    },
+    {
+      "id": "8f5c",
+      "name": "John W. Young",
+      "missions": [
+        "STS-61"
+      ],
+      "country": "USA"
+    },
+    {
+      "id": "e39e",
+      "name": "Story Musgrave",
+      "missions": [
+        "STS-61"
+      ],
+      "country": "USA"
+    },
+    {
+      "id": "8938",
+      "name": "Jeffrey Hoffman",
+      "missions": [
+        "STS-61"
+      ],
+      "country": "USA"
+    },
+    {
+      "id": "1e6e",
+      "name": "Richard Hieb",
+      "missions": [
+        "STS-61"
+      ],
+      "country": "USA"
+    },
+    {
+      "id": "ca85",
+      "name": "Claude Nicollier",
+      "missions": [
+        "STS-61"
+      ],
+      "country": "USA"
+    },
+    {
+      "id": "d52e",
+      "name": "Kathryn Thornton",
+      "missions": [
+        "STS-61"
+      ],
+      "country": "USA"
+    },
+    {
+      "id": "7926",
+      "name": "John Carter",
+      "missions": [
+        "Lunar Discovery"
+      ],
+      "country": "USA"
+    },
+    {
+      "id": "9d57",
+      "name": "Samantha Lee",
+      "missions": [
+        "Lunar Discovery"
+      ],
+      "country": "USA"
     }
   ]
 }

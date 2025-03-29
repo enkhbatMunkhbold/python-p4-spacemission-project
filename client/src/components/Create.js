@@ -12,7 +12,7 @@ const Create = ({ onAddMission, onAddAstronauts, astronauts }) => {
     crew: [],
     space_shuttle: '',
     country: '',
-    isFavorite: false
+    isFavorite: true
   }
   
   const [ newMission, setNewMission ]= useState(initialNewMission)
@@ -36,22 +36,15 @@ const Create = ({ onAddMission, onAddAstronauts, astronauts }) => {
         .map(name => name.trim())
         .filter(name => name !== '')
     
-    const existingAtronautNames = astronauts.map(astronaut => astronaut.name)
-    let crewObjects = []    
-    
-    // const crewArray = crewInput.split(',')
-    crewNames.forEach(name => {
-      if(!existingAtronautNames.includes(name)) {
-      //   name.missions.push(newMission.name)
-      // } else {
-        crewObjects.push({
-          name: name,
-          missions: [newMission.name],
-          country: newMission.country,
-          isInService: newMission.isInService
-        })
-      }
-    })
+    const existingAtronautNames = astronauts.filter(astro => crewNames.includes(astro.name))
+    const newAstronauts = crewNames.filter(name => !astronauts.some(astro => astro.name === name))
+       .map(name => ({
+        name: name,
+        missions: [newMission.name],
+        country: newMission.country,
+        isInService: newMission.isInService
+       })) 
+       
     const missionData = { ...newMission, crew: crewNames }
 
     try {
@@ -65,17 +58,32 @@ const Create = ({ onAddMission, onAddAstronauts, astronauts }) => {
       const missionResult = await missionResponse.json()
       onAddMission(missionResult)
 
-      if(crewObjects.length > 0) {
-        const crewResponse = await fetch('/astronauts', {
-          method: 'POST',
+      if(newAstronauts.length > 0) {
+        const crewResults = []
+        for (const astronaut of newAstronauts) {
+          const crewResponse = await fetch('/astronauts', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(astronaut)
+          })
+
+          const crewResult = await crewResponse.json()
+          crewResults.push(crewResult)
+        }
+        onAddAstronauts(crewResults)
+      }
+
+      for (let astro of existingAtronautNames) {
+        const updatedMissions = [...astro.missions, newMission.name]
+        await fetch(`/astronauts/${astro.id}`, {
+          method: 'PATCH',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(crewObjects)
+          body: JSON.stringify({ missions: updatedMissions })
         })
-
-        const crewResult = await crewResponse.json()
-        onAddAstronauts(crewResult)
       }
 
       setNewMission(initialNewMission)
@@ -115,7 +123,7 @@ const Create = ({ onAddMission, onAddAstronauts, astronauts }) => {
           <div className="mb-3">
             <label htmlFor="crew" className="form-label">Crew</label>
             <input type="text" className="form-control" 
-              name="crew" value={newMission.crew} onChange={handleChange}
+              name="crew" value={crewInput} onChange={handleChange}
             />
           </div>
           <div className="mb-3">
