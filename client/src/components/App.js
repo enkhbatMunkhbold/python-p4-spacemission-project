@@ -49,6 +49,11 @@ function App() {
     setMissions(updatedMissions)
   }
 
+  function removeAstronaut(deletedAstronaut) {
+    const updatedAstronauts = astronauts.filter(astro => astro.id !== deletedAstronaut.id)
+    setAstronauts(updatedAstronauts)
+  }
+
   return (
     <div className="App"> 
       <Router>
@@ -62,7 +67,8 @@ function App() {
             />}/>        
           <Route path="/astronauts" element={ 
             <Astronauts astronauts={astronauts} 
-              onUpdateAstronauts={handleUpdateAstronauts}
+              onUpdateList={handleUpdateAstronauts}
+              onRemoveAstronaut={removeAstronaut}
             />}/>
           <Route path="/missions/new" element={
             <Create onAddMission={handleAddMission} 

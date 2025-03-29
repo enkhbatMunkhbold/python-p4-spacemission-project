@@ -20,7 +20,7 @@ const Astronaut = ({ astronaut, onUpdateList, onRemoveAstronaut }) => {
 
   function renderMissions(list) {
     return list.map(mission => {
-      return <li>{mission}</li>
+      return <li key={mission}>{mission}</li>
     })
   }
 
@@ -39,9 +39,8 @@ const Astronaut = ({ astronaut, onUpdateList, onRemoveAstronaut }) => {
         <hr/>
         <div className='text'>
           <p><span>Country:</span> {country}</p>
-          <p><span>Missions:</span> 
-            <ul>{renderMissions(missions)}</ul>
-          </p>
+          <p><span>Missions:</span></p>
+          <ul>{renderMissions(missions)}</ul>          
           <p><span>Is in Service:</span>
             {isInService ? <i className="bi bi-hand-thumbs-up-fill" onClick={handleFavoriteClick}></i> : 
               <i className="bi bi-hand-thumbs-down" onClick={handleFavoriteClick}></i>}

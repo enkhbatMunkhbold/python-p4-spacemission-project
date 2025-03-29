@@ -1,30 +1,6 @@
 {
   "missions": [
     {
-      "id": "1",
-      "name": "Vostok 1",
-      "date": "04/12/1961",
-      "image": "../images/vostok.jpg",
-      "crew": [
-        "Yuri Gagarin"
-      ],
-      "space_shuttle": "Vostok",
-      "country": "Soviet Union",
-      "isFavorite": true
-    },
-    {
-      "id": "2",
-      "name": "Mercury-Redstone 3",
-      "date": "05/05/1961",
-      "image": "../images/freedom7.jpg",
-      "crew": [
-        "Alan Shepard"
-      ],
-      "space_shuttle": "Freedom 7",
-      "country": "USA",
-      "isFavorite": false
-    },
-    {
       "id": "3",
       "name": "Gemini 4",
       "date": "06/03/1965",
@@ -35,7 +11,7 @@
       ],
       "space_shuttle": "Gemini 4",
       "country": "USA",
-      "isFavorite": false
+      "isFavorite": true
     },
     {
       "id": "4",
@@ -271,56 +247,50 @@
       "isFavorite": false
     },
     {
-      "id": "fe7d",
-      "name": "Lunar Gateway",
-      "date": "09/15/2024",
-      "image": "./images/lunar_gateway.jpeg",
+      "id": "29e8",
+      "name": "STS-61",
+      "date": "12/02/1993",
+      "image": "../images/sts61.jpg",
       "crew": [
-        "Jessica Watkins",
-        " Josh Kutryk",
-        " Tom Marshburn"
+        "John W. Young",
+        " Story Musgrave",
+        " Jeffrey Hoffman",
+        " Richard Hieb",
+        " Claude Nicollier",
+        " Kathryn Thornton"
       ],
-      "space_shuttle": "Gateway",
+      "space_shuttle": "Endeavour",
       "country": "USA",
-      "isFavorite": true
+      "isFavorite": false
     }
   ],
   "astronauts": [
-    {
-      "id": "1",
-      "name": "Yuri Gagarin",
-      "missions": [
-        "Vostok 1"
-      ]
-    },
-    {
-      "id": "2",
-      "name": "Alan Shepard",
-      "missions": [
-        "Mercury-Redstone 3"
-      ],
-      "isInService": true
-    },
     {
       "id": "3",
       "name": "James McDivitt",
       "missions": [
         "Gemini 4"
-      ]
+      ],
+      "country": "USA",
+      "isInService": true
     },
     {
       "id": "4",
       "name": "Ed White",
       "missions": [
         "Gemini 4"
-      ]
+      ],
+      "country": "USA",
+      "isInService": true
     },
     {
       "id": "5",
       "name": "Neil Armstrong",
       "missions": [
         "Apollo 11"
-      ]
+      ],
+      "country": "USA",
+      "isInService": true
     },
     {
       "id": "6",
@@ -328,330 +298,385 @@
       "missions": [
         "Apollo 11",
         "Gemini 12"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "7",
       "name": "Michael Collins",
       "missions": [
         "Apollo 11"
-      ]
+      ],
+      "country": "USA",
+      "isInService": true
     },
     {
       "id": "8",
       "name": "Georgi Dobrovolski",
       "missions": [
         "Soyuz 11"
-      ]
+      ],
+      "country": "Soviet Union",
+      "isInService": false
     },
     {
       "id": "9",
       "name": "Viktor Patsayev",
       "missions": [
         "Soyuz 11"
-      ]
+      ],
+      "country": "Soviet Union",
+      "isInService": false
     },
     {
       "id": "10",
       "name": "Vladislav Volkov",
       "missions": [
         "Soyuz 11"
-      ]
+      ],
+      "country": "Soviet Union",
+      "isInService": false
     },
     {
       "id": "11",
       "name": "John Young",
       "missions": [
         "STS-1"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "12",
       "name": "Robert Crippen",
       "missions": [
         "STS-1"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "13",
       "name": "Loren Shriver",
       "missions": [
         "STS-31"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "14",
       "name": "Charles Bolden",
       "missions": [
         "STS-31"
-      ]
+      ],
+      "country": "USA",
+      "isInService": true
     },
     {
       "id": "15",
       "name": "Steven Hawley",
       "missions": [
         "STS-31"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "16",
       "name": "Yang Liwei",
       "missions": [
         "Shenzhou 5"
-      ]
+      ],
+      "country": "China",
+      "isInService": false
     },
     {
       "id": "17",
       "name": "Doug Hurley",
       "missions": [
         "Crew Dragon Demo-2"
-      ]
+      ],
+      "country": "USA",
+      "isInService": true
     },
     {
       "id": "18",
       "name": "Bob Behnken",
       "missions": [
         "Crew Dragon Demo-2"
-      ]
+      ],
+      "country": "USA",
+      "isInService": true
     },
     {
       "id": "19",
       "name": "Frank Borman",
       "missions": [
         "Apollo 8"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "20",
       "name": "Jim Lovell",
       "missions": [
         "Apollo 8",
-        "Gemini 12"
-      ]
+        "Apollo 13"
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "21",
       "name": "William Anders",
       "missions": [
         "Apollo 8"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "22",
       "name": "Vance Brand",
       "missions": [
         "STS-41B"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "23",
       "name": "Robert Gibson",
       "missions": [
         "STS-41B"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "24",
       "name": "Bruce McCandless",
       "missions": [
         "STS-41B"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "25",
       "name": "Alexey Ovchinin",
       "missions": [
         "Soyuz MS-10"
-      ]
+      ],
+      "country": "Russia",
+      "isInService": true
     },
     {
       "id": "26",
       "name": "Nick Hague",
       "missions": [
         "Soyuz MS-10"
-      ]
+      ],
+      "country": "USA",
+      "isInService": true
     },
     {
       "id": "27",
       "name": "William Shepherd",
       "missions": [
         "Expedition 1"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "28",
       "name": "Sergei Krikalev",
       "missions": [
         "Expedition 1"
-      ]
+      ],
+      "country": "Russia",
+      "isInService": false
     },
     {
       "id": "29",
       "name": "Yuri Gidzenko",
       "missions": [
         "Expedition 1"
-      ]
+      ],
+      "country": "Russia",
+      "isInService": false
     },
     {
       "id": "30",
       "name": "Sergey Prokopyev",
       "missions": [
         "Expedition 69"
-      ]
+      ],
+      "country": "Russia",
+      "isInService": true
     },
     {
       "id": "31",
       "name": "Dmitry Petelin",
       "missions": [
         "Expedition 69"
-      ]
+      ],
+      "country": "Russia",
+      "isInService": true
     },
     {
       "id": "32",
       "name": "Frank Rubio",
       "missions": [
         "Expedition 69"
-      ]
+      ],
+      "country": "USA",
+      "isInService": true
     },
     {
       "id": "33",
       "name": "Jim Lovell",
       "missions": [
         "Apollo 13"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "34",
       "name": "Jack Swigert",
       "missions": [
         "Apollo 13"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "35",
       "name": "Fred Haise",
       "missions": [
         "Apollo 13"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "36",
       "name": "Francis Scobee",
       "missions": [
         "STS-51-L"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "37",
       "name": "Michael Smith",
       "missions": [
         "STS-51-L"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "38",
       "name": "Ronald McNair",
       "missions": [
         "STS-51-L"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "39",
       "name": "Ellison Onizuka",
       "missions": [
         "STS-51-L"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "40",
       "name": "Judith Resnik",
       "missions": [
         "STS-51-L"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "41",
       "name": "Gregory Jarvis",
       "missions": [
         "STS-51-L"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "42",
       "name": "Christa McAuliffe",
       "missions": [
         "STS-51-L"
-      ]
+      ],
+      "country": "USA",
+      "isInService": false
     },
     {
       "id": "43",
       "name": "Jing Haipeng",
       "missions": [
         "Shenzhou 9"
-      ]
+      ],
+      "country": "China",
+      "isInService": true
     },
     {
       "id": "44",
       "name": "Liu Wang",
       "missions": [
         "Shenzhou 9"
-      ]
+      ],
+      "country": "China",
+      "isInService": true
     },
     {
       "id": "45",
       "name": "Liu Yang",
       "missions": [
         "Shenzhou 9"
-      ]
+      ],
+      "country": "China",
+      "isInService": true
     },
     {
       "id": "46",
       "name": "Reid Wiseman",
       "missions": [
         "Artemis II"
-      ]
+      ],
+      "country": "USA",
+      "isInService": true
     },
     {
-      "id": "47",
-      "name": "Victor Glover",
-      "missions": [
-        "Artemis II"
-      ]
+      "id": "4678"
     },
     {
-      "id": "48",
-      "name": "Christina Koch",
-      "missions": [
-        "Artemis II"
-      ]
+      "id": "af6e"
     },
     {
-      "id": "49",
-      "name": "Jeremy Hansen",
-      "missions": [
-        "Artemis II"
-      ]
-    },
-    {
-      "id": "50",
-      "name": "Jessica Watkins",
-      "missions": [
-        "Lunar Gateway"
-      ]
-    },
-    {
-      "id": "51",
-      "name": "Josh Kutryk",
-      "missions": [
-        "Lunar Gateway"
-      ]
-    },
-    {
-      "id": "52",
-      "name": "Tom Marshburn",
-      "missions": [
-        "Lunar Gateway"
-      ]
+      "0": "John W. Young",
+      "1": " Story Musgrave",
+      "2": " Jeffrey Hoffman",
+      "3": " Richard Hieb",
+      "4": " Claude Nicollier",
+      "5": " Kathryn Thornton",
+      "id": "6e8f"
     }
   ]
 }

@@ -7,7 +7,7 @@ const Astronauts = ({ astronauts, onUpdateList, onRemoveAstronaut }) => {
   function renderAstronautsList(list) {
     return list.map(astro => {
       return (
-        <Astronaut key={astronauts.id}
+        <Astronaut key={astro.id}
           astronaut={astro}
           onUpdateList={onUpdateList}
           onRemoveAstronaut={onRemoveAstronaut}

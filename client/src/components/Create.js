@@ -1,30 +1,19 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import "../stylesheets/create.css"
 
-const Create = ({ onAddMission, onAddCrew, astronauts }) => {
+const Create = ({ onAddMission, onAddCrew }) => {
+
+  const navigate = useNavigate()
   const initialNewMission = { name: '', date: '', image: '', crew: [], space_shuttle: '', country: '', isFavorite: false}
   const [ newMission, setNewMission ]= useState(initialNewMission)
   
   const { name, date, image, crew, space_shuttle, country } = newMission
-  let newAstronautObjects = {}
+
   function handleChange(e) {
     let { name, value } = e.target
-    // value = name === 'crew' ? value.split(',') : value
+    value = name === 'crew' ? value.split(',') : value
     setNewMission({...newMission, [name]: value})
-  }
-
-  function handleCrewChange(e) {
-    const crewNames = e.target.value.split(',')
-    const astronautNames = astronauts.map(([ name ]) => name)    
-    for( let astronaut of crewNames ) {
-      if(!astronautNames.includes(astronaut)){
-        newAstronautObjects.push({ name: astronaut, missions: [name]})
-      //   let newAstronaut = { name: astronaut, missions: name }
-      //   astronauts.push(newAstronaut)
-      // } else {
-      //   astronauts.map(astro => astro.name === astronaut ? astro.missions.push(name) : astro)
-      }
-    }
   }
 
   function handleCheck(e) {
@@ -43,6 +32,9 @@ const Create = ({ onAddMission, onAddCrew, astronauts }) => {
       country: newMission.country,
       isFavorite: newMission.isFavorite
     }
+
+    console.log("Crew:", missionData.crew)
+
     fetch('/missions', {
       method: 'POST',
       headers: {
@@ -58,11 +50,12 @@ const Create = ({ onAddMission, onAddCrew, astronauts }) => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(newAstronautObjects)
+      body: JSON.stringify(missionData.crew)
     })
       .then(res => res.json())
       .then(onAddCrew)
     setNewMission(initialNewMission)
+    navigate('/missions')
   }
 
   return (
@@ -93,7 +86,7 @@ const Create = ({ onAddMission, onAddCrew, astronauts }) => {
           <div className="mb-3">
             <label htmlFor="crew" className="form-label">Crew</label>
             <input type="text" className="form-control" 
-              name="crew" value={crew} onChange={handleCrewChange}
+              name="crew" value={crew} onChange={handleChange}
             />
           </div>
           <div className="mb-3">
