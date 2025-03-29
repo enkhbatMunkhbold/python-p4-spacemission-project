@@ -3,7 +3,11 @@ import "../stylesheets/mission.css"
 
 const Astronaut = ({ astronaut, onUpdateList, onRemoveAstronaut }) => {
 
-  const { id, name, country, missions, isInService } = astronaut
+  if(!astronaut) {
+    return <div>Loading astronaut data...</div>
+  }
+
+  const { id, name, country, missions = [], isInService } = astronaut
   
   function handleFavoriteClick() {    
     fetch(`/astronauts/${id}`, {
@@ -12,16 +16,16 @@ const Astronaut = ({ astronaut, onUpdateList, onRemoveAstronaut }) => {
         "Content-Type": "Application/JSON"
       },
       body: JSON.stringify({isInService: !isInService})
-    }).then(res => res.json())
-    .then(data => {
-      onUpdateList(data)
+    }).then(res => {
+      if(!res.ok) throw new Error('Failed to update astronaut')
+      return res.json()
     })
+    .then(data => onUpdateList(data))
+    .catch(error => console.error('Error updating astronaut:', error))
   }
 
-  function renderMissions(list) {
-    return list.map(mission => {
-      return <li key={mission}>{mission}</li>
-    })
+  function renderMissions(list = []) {
+    return list.length > 0 ? list.map((mission, index) => <li key={mission}>{mission}</li>) : <li>No Missions</li>    
   }
 
   function handleDelete() {

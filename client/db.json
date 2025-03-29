@@ -1,6 +1,30 @@
 {
   "missions": [
     {
+      "id": "1",
+      "name": "Vostok 1",
+      "date": "04/12/1961",
+      "image": "../images/vostok.jpg",
+      "crew": [
+        "Yuri Gagarin"
+      ],
+      "space_shuttle": "Vostok",
+      "country": "Soviet Union",
+      "isFavorite": true
+    },
+    {
+      "id": "2",
+      "name": "Mercury-Redstone 3",
+      "date": "05/05/1961",
+      "image": "../images/freedom7.jpg",
+      "crew": [
+        "Alan Shepard"
+      ],
+      "space_shuttle": "Freedom 7",
+      "country": "USA",
+      "isFavorite": false
+    },
+    {
       "id": "3",
       "name": "Gemini 4",
       "date": "06/03/1965",
@@ -11,7 +35,7 @@
       ],
       "space_shuttle": "Gemini 4",
       "country": "USA",
-      "isFavorite": true
+      "isFavorite": false
     },
     {
       "id": "4",
@@ -245,26 +269,27 @@
       "space_shuttle": "Orion",
       "country": "USA",
       "isFavorite": false
-    },
-    {
-      "id": "29e8",
-      "name": "STS-61",
-      "date": "12/02/1993",
-      "image": "../images/sts61.jpg",
-      "crew": [
-        "John W. Young",
-        " Story Musgrave",
-        " Jeffrey Hoffman",
-        " Richard Hieb",
-        " Claude Nicollier",
-        " Kathryn Thornton"
-      ],
-      "space_shuttle": "Endeavour",
-      "country": "USA",
-      "isFavorite": false
     }
   ],
   "astronauts": [
+    {
+      "id": "1",
+      "name": "Yuri Gagarin",
+      "missions": [
+        "Vostok 1"
+      ],
+      "country": "Soviet Union",
+      "isInService": false
+    },
+    {
+      "id": "2",
+      "name": "Alan Shepard",
+      "missions": [
+        "Mercury-Redstone 3"
+      ],
+      "country": "USA",
+      "isInService": false
+    },
     {
       "id": "3",
       "name": "James McDivitt",
@@ -272,7 +297,7 @@
         "Gemini 4"
       ],
       "country": "USA",
-      "isInService": true
+      "isInService": false
     },
     {
       "id": "4",
@@ -281,7 +306,7 @@
         "Gemini 4"
       ],
       "country": "USA",
-      "isInService": true
+      "isInService": false
     },
     {
       "id": "5",
@@ -290,7 +315,7 @@
         "Apollo 11"
       ],
       "country": "USA",
-      "isInService": true
+      "isInService": false
     },
     {
       "id": "6",
@@ -309,7 +334,7 @@
         "Apollo 11"
       ],
       "country": "USA",
-      "isInService": true
+      "isInService": false
     },
     {
       "id": "8",
@@ -372,7 +397,7 @@
         "STS-31"
       ],
       "country": "USA",
-      "isInService": true
+      "isInService": false
     },
     {
       "id": "15",
@@ -399,7 +424,7 @@
         "Crew Dragon Demo-2"
       ],
       "country": "USA",
-      "isInService": true
+      "isInService": false
     },
     {
       "id": "18",
@@ -408,7 +433,7 @@
         "Crew Dragon Demo-2"
       ],
       "country": "USA",
-      "isInService": true
+      "isInService": false
     },
     {
       "id": "19",
@@ -664,19 +689,58 @@
       "isInService": true
     },
     {
-      "id": "4678"
+      "id": "47",
+      "name": "Victor Glover",
+      "missions": [
+        "Artemis II"
+      ],
+      "country": "USA",
+      "isInService": true
     },
     {
-      "id": "af6e"
+      "id": "48",
+      "name": "Christina Koch",
+      "missions": [
+        "Artemis II"
+      ],
+      "country": "USA",
+      "isInService": true
     },
     {
-      "0": "John W. Young",
-      "1": " Story Musgrave",
-      "2": " Jeffrey Hoffman",
-      "3": " Richard Hieb",
-      "4": " Claude Nicollier",
-      "5": " Kathryn Thornton",
-      "id": "6e8f"
+      "id": "49",
+      "name": "Jeremy Hansen",
+      "missions": [
+        "Artemis II"
+      ],
+      "country": "Canada",
+      "isInService": true
+    },
+    {
+      "id": "50",
+      "name": "Jessica Watkins",
+      "missions": [
+        "Lunar Gateway"
+      ],
+      "country": "USA",
+      "isInService": true
+    },
+    {
+      "id": "51",
+      "name": "Josh Kutryk",
+      "missions": [
+        "Lunar Gateway"
+      ],
+      "country": "Canada",
+      "isInService": true
+    },
+    {
+      "id": "52",
+      "name": "Tom Marshburn",
+      "missions": [
+        "Lunar Gateway"
+      ],
+      "country": "USA",
+      "isInService": false
     }
   ]
 }

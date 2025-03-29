@@ -2,18 +2,25 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import "../stylesheets/create.css"
 
-const Create = ({ onAddMission, onAddCrew }) => {
+const Create = ({ onAddMission, onAddAstronauts, astronauts }) => {
 
   const navigate = useNavigate()
-  const initialNewMission = { name: '', date: '', image: '', crew: [], space_shuttle: '', country: '', isFavorite: false}
-  const [ newMission, setNewMission ]= useState(initialNewMission)
+  const initialNewMission = {
+    name: '',
+    date: '',
+    image: '',
+    crew: [],
+    space_shuttle: '',
+    country: '',
+    isFavorite: false
+  }
   
-  const { name, date, image, crew, space_shuttle, country } = newMission
+  const [ newMission, setNewMission ]= useState(initialNewMission)
+  const [ crewInput, setCrewInput ] = useState('')
 
   function handleChange(e) {
-    let { name, value } = e.target
-    value = name === 'crew' ? value.split(',') : value
-    setNewMission({...newMission, [name]: value})
+    let { name, value } = e.target   
+    name === 'crew' ? setCrewInput(value) : setNewMission((prev) => ({ ...prev, [name]: value}))
   }
 
   function handleCheck(e) {
@@ -21,41 +28,63 @@ const Create = ({ onAddMission, onAddCrew }) => {
     setNewMission({...newMission, [name]: checked})
   }
 
-  function handleSubmit(e) {
-    e.preventDefault()
-    const missionData = {
-      name: newMission.name,
-      date: newMission.date,
-      image: newMission.image,
-      crew: newMission.crew,
-      space_shuttle: newMission.space_shuttle,
-      country: newMission.country,
-      isFavorite: newMission.isFavorite
+  const handleSubmit = async (e) => {
+    e.preventDefault()  
+    
+    const crewNames = crewInput
+        .split(',')
+        .map(name => name.trim())
+        .filter(name => name !== '')
+    
+    const existingAtronautNames = astronauts.map(astronaut => astronaut.name)
+    let crewObjects = []    
+    
+    // const crewArray = crewInput.split(',')
+    crewNames.forEach(name => {
+      if(!existingAtronautNames.includes(name)) {
+      //   name.missions.push(newMission.name)
+      // } else {
+        crewObjects.push({
+          name: name,
+          missions: [newMission.name],
+          country: newMission.country,
+          isInService: newMission.isInService
+        })
+      }
+    })
+    const missionData = { ...newMission, crew: crewNames }
+
+    try {
+      const missionResponse = await fetch('/missions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(missionData)
+      })
+      const missionResult = await missionResponse.json()
+      onAddMission(missionResult)
+
+      if(crewObjects.length > 0) {
+        const crewResponse = await fetch('/astronauts', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(crewObjects)
+        })
+
+        const crewResult = await crewResponse.json()
+        onAddAstronauts(crewResult)
+      }
+
+      setNewMission(initialNewMission)
+      setCrewInput('')
+      navigate('/missions')
+    }    
+    catch(error) {
+      console.error("Error submitting data:", error)
     }
-
-    console.log("Crew:", missionData.crew)
-
-    fetch('/missions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(missionData)
-    })
-     .then(res => res.json())
-     .then(onAddMission) 
-
-    fetch('/astronauts', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(missionData.crew)
-    })
-      .then(res => res.json())
-      .then(onAddCrew)
-    setNewMission(initialNewMission)
-    navigate('/missions')
   }
 
   return (
@@ -67,39 +96,39 @@ const Create = ({ onAddMission, onAddCrew }) => {
             <label htmlFor="missionName" className="form-label">Name</label>
             <input type="text" className="form-control" 
               name="name" aria-describedby="nameHelp" 
-              value={name} onChange={handleChange}
+              value={newMission.name} onChange={handleChange}
             />
             <div id="namelHelp" className="form-text">It could be your favorite mission...</div>
           </div>
           <div className="mb-3">
             <label htmlFor="missionDate" className="form-label">Date</label>
             <input type="text" className="form-control" 
-              name="date" value={date} onChange={handleChange}
+              name="date" value={newMission.date} onChange={handleChange}
             />
           </div>
           <div className="mb-3">
             <label htmlFor="missionImage" className="form-label">Image Link</label>
             <input type="text" className="form-control" 
-              name="image" value={image} onChange={handleChange}
+              name="image" value={newMission.image} onChange={handleChange}
             />
           </div>          
           <div className="mb-3">
             <label htmlFor="crew" className="form-label">Crew</label>
             <input type="text" className="form-control" 
-              name="crew" value={crew} onChange={handleChange}
+              name="crew" value={newMission.crew} onChange={handleChange}
             />
           </div>
           <div className="mb-3">
             <label htmlFor="space_shuttle" className="form-label">Space Shuttle</label>
             <input type="text" className="form-control" 
-              name="space_shuttle" value={space_shuttle}
+              name="space_shuttle" value={newMission.space_shuttle}
               onChange={handleChange}
             />
           </div>
           <div className="mb-3">
             <label htmlFor="country" className="form-label">Country</label>
             <input type="text" className="form-control" 
-              name="country" value={country}
+              name="country" value={newMission.country}
               onChange={handleChange}
             />
           </div>
