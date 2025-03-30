@@ -1,80 +1,17 @@
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import MetaData
 from sqlalchemy.orm import validates
-from sqlalchemy.ext.hybrid import hybrid_property
 from sqlalchemy.ext.associationproxy import association_proxy
 from sqlalchemy_serializer import SerializerMixin
 
-from config import db, bcrypt
+convention = {
+    "ix": "ix_%(column_0_label)s",
+    "uq": "uq_%(table_name)s_%(column_0_name)s",
+    "ck": "ck_%(table_name)s_%(constraint_name)s",
+    "fk": "fk_%(table_name)s_%(column_0_name)s_%(referred_table_name)s",
+    "pk": "pk_%(table_name)s"
+}
 
-class User(db.Model, SerializerMixin):
-  __tablename__ = 'users'
+metadata = MetaData(naming_convention=convention)
 
-  id = db.Column(db.Integer, primary_key=True)
-  username = db.Column(db.String, nullable=False)
-  _password_hash = db.Column(db.String)
-
-  restaurants = db.relationship('Restaurant', back_populates = 'user')
-  cuisines = association_proxy('restaurants', 'cuisine')
-  serialize_rules = ('-restaurants.user', '-_password_hash',)
-
-  @hybrid_property
-  def password_hash(self):
-    raise Exception('Password hashes may not be viewed.')
-
-  @password_hash.setter
-  def password_hash(self, password):
-      password_hash = bcrypt.generate_password_hash(
-          password.encode('utf-8'))
-      self._password_hash = password_hash.decode('utf-8')
-  def authenticate(self, password):
-      return bcrypt.check_password_hash(
-          self._password_hash, password.encode('utf-8'))  
-  
-  def __repr__(self):
-      return f'User {self.username}, ID: {self.id}'
-  
-
-class Cuisine(db.Model, SerializerMixin):
-  __tablename__ = "cuisines"
-
-  id = db.Column(db.Integer, primary_key=True)
-  name = db.Column(db.String, nullable=False)
-  region = db.Column(db.String)
-
-  restaurants = db.relationship('Restaurant', back_populates='cuisine')
-  users = association_proxy('restaurants', 'user')
-  serialize_rules = ('-users',)
-
-  @validates('name', 'region')
-  def validate_presence(self, key, value):
-     if not value:
-        raise ValueError(f'{key} must exist.')
-     return value
-
-  def __repr__(self):
-     return f"<Cuisine {self.name}, {self.region}>"
-  
-
-class Restaurant(db.Model, SerializerMixin):
-  __tablename__ = "restaurants"
-
-  id = db.Column(db.Integer, primary_key=True)
-  name = db.Column(db.String, nullable=False)
-  address = db.Column(db.String, nullable=False)
-
-  cuisine_id = db.Column(db.Integer, db.ForeignKey('cuisines.id'))
-  user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-
-  users = db.relationship('User', back_populates='restaurants')
-  cuisines = db.relationship('Cuisine', back_populates='restaurants')
-
-  serialize_only = ('id', 'name', 'address',)
-
-  @validates('name', 'cuisine_id', 'user_id')
-  def validate_presence(self, key, value):
-     if not value:
-        raise ValueError(f'{key} must exist.')
-     return value
-
-  def __repr__(self):
-     return f"<Restaurant {self.name}>"
-
+db = SQLAlchemy(metadata=metadata)
