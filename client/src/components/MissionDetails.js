@@ -34,7 +34,7 @@ const MissionDetails = () => {
             <p><span>Spacecraft:</span> {space_shuttle}</p>
             <p><span>Date:</span> {date}</p> 
             <p><span>Crew:</span></p>
-            {crew.length > 0 ? <ul>{displayCrew(crew)}</ul> : <p>No crew data available</p>} 
+            {crew?.length > 0 ? <ul>{displayCrew(crew)}</ul> : <p>No crew data available</p>} 
             <p><span>Is Mission Your Favorite:</span>
               {isFavorite ? <i className="bi bi-hand-thumbs-up-fill"></i> : 
                 <i className="bi bi-hand-thumbs-down"></i>}

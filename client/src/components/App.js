@@ -40,8 +40,18 @@ function App() {
   }
 
   function handleAddAstronauts(data) {
-    // const[first, ...rest] = data
-    setAstronauts([...astronauts, data])
+    setAstronauts(preAstronauts => {
+      const updatedAstronauts = [...preAstronauts]
+      data.forEach(newAstro => {
+        const existingIndex = updatedAstronauts.findIndex(a => a.id === newAstro.id)
+        if(existingIndex >= 0) {
+          updatedAstronauts[existingIndex].missions.push(newAstro.missions[0])
+        } else {
+          updatedAstronauts.push(newAstro)
+        }
+      })
+      return updatedAstronauts
+    })
   } 
 
   function removeMission(deletedMission) {

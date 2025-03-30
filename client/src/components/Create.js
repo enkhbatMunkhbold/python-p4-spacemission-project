@@ -153,4 +153,4 @@ const Create = ({ onAddMission, onAddAstronauts, astronauts }) => {
   )
 }
 
-export default Create
+export default Create;

@@ -271,7 +271,7 @@
       "isFavorite": false
     },
     {
-      "id": "df3d",
+      "id": "37bb",
       "name": "STS-61",
       "date": "12/02/1993",
       "image": "../images/sts61.jpg",
@@ -284,19 +284,6 @@
         "Kathryn Thornton"
       ],
       "space_shuttle": "Endeavour",
-      "country": "USA",
-      "isFavorite": false
-    },
-    {
-      "id": "7ff4",
-      "name": "Lunar Discovery",
-      "date": "07/30/2030",
-      "image": "../images/lunar_discovery.jpg",
-      "crew": [
-        "John Carter",
-        "Samantha Lee"
-      ],
-      "space_shuttle": "Orion-2",
       "country": "USA",
       "isFavorite": true
     }
@@ -345,7 +332,7 @@
         "Apollo 11"
       ],
       "country": "USA",
-      "isInService": false
+      "isInService": true
     },
     {
       "id": "6",
@@ -773,7 +760,7 @@
       "isInService": false
     },
     {
-      "id": "8f5c",
+      "id": "23c7",
       "name": "John W. Young",
       "missions": [
         "STS-61"
@@ -781,7 +768,7 @@
       "country": "USA"
     },
     {
-      "id": "e39e",
+      "id": "a621",
       "name": "Story Musgrave",
       "missions": [
         "STS-61"
@@ -789,7 +776,7 @@
       "country": "USA"
     },
     {
-      "id": "8938",
+      "id": "ac8d",
       "name": "Jeffrey Hoffman",
       "missions": [
         "STS-61"
@@ -797,7 +784,7 @@
       "country": "USA"
     },
     {
-      "id": "1e6e",
+      "id": "5a49",
       "name": "Richard Hieb",
       "missions": [
         "STS-61"
@@ -805,7 +792,7 @@
       "country": "USA"
     },
     {
-      "id": "ca85",
+      "id": "fa41",
       "name": "Claude Nicollier",
       "missions": [
         "STS-61"
@@ -813,26 +800,10 @@
       "country": "USA"
     },
     {
-      "id": "d52e",
+      "id": "8109",
       "name": "Kathryn Thornton",
       "missions": [
         "STS-61"
-      ],
-      "country": "USA"
-    },
-    {
-      "id": "7926",
-      "name": "John Carter",
-      "missions": [
-        "Lunar Discovery"
-      ],
-      "country": "USA"
-    },
-    {
-      "id": "9d57",
-      "name": "Samantha Lee",
-      "missions": [
-        "Lunar Discovery"
       ],
       "country": "USA"
     }
