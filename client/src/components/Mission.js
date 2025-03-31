@@ -2,10 +2,10 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import "../stylesheets/mission.css"
 
-const Mission = ({ mission, onUpdateList, onRemoveMission }) => {
+const Mission = ({ mission, onUpdateList, onRemoveMission, onRemoveAstronaut }) => {
 
   const navigate = useNavigate()
-  const { id, date, image, space_shuttle, country, isFavorite } = mission  
+  const { id, date, image, crew, space_shuttle, country, isFavorite } = mission  
   
   function handleFavoriteClick() {    
     fetch(`/missions/${id}`, {
@@ -30,6 +30,16 @@ const Mission = ({ mission, onUpdateList, onRemoveMission }) => {
     })
     .then(res => res.json())
     .then(() => onRemoveMission(mission))
+
+    if(crew.length > 0) {
+      crew.forEach(astro => {
+        fetch(`/astronauts/${astro}`, {
+          method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(() => onRemoveAstronaut(astro))
+      })
+    }
   }
 
   return (

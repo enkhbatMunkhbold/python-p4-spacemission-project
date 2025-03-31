@@ -74,6 +74,7 @@ function App() {
             <Missions missions={missions} 
               onUpdateList={handleUpdateMissions}
               onRemoveMission={removeMission}
+              onRemoveAstronaut={removeAstronaut}
             />}/>        
           <Route path="/astronauts" element={ 
             <Astronauts astronauts={astronauts} 

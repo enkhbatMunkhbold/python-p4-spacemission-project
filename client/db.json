@@ -269,23 +269,6 @@
       "space_shuttle": "Orion",
       "country": "USA",
       "isFavorite": false
-    },
-    {
-      "id": "37bb",
-      "name": "STS-61",
-      "date": "12/02/1993",
-      "image": "../images/sts61.jpg",
-      "crew": [
-        "John W. Young",
-        "Story Musgrave",
-        "Jeffrey Hoffman",
-        "Richard Hieb",
-        "Claude Nicollier",
-        "Kathryn Thornton"
-      ],
-      "space_shuttle": "Endeavour",
-      "country": "USA",
-      "isFavorite": true
     }
   ],
   "astronauts": [
@@ -758,54 +741,6 @@
       ],
       "country": "USA",
       "isInService": false
-    },
-    {
-      "id": "23c7",
-      "name": "John W. Young",
-      "missions": [
-        "STS-61"
-      ],
-      "country": "USA"
-    },
-    {
-      "id": "a621",
-      "name": "Story Musgrave",
-      "missions": [
-        "STS-61"
-      ],
-      "country": "USA"
-    },
-    {
-      "id": "ac8d",
-      "name": "Jeffrey Hoffman",
-      "missions": [
-        "STS-61"
-      ],
-      "country": "USA"
-    },
-    {
-      "id": "5a49",
-      "name": "Richard Hieb",
-      "missions": [
-        "STS-61"
-      ],
-      "country": "USA"
-    },
-    {
-      "id": "fa41",
-      "name": "Claude Nicollier",
-      "missions": [
-        "STS-61"
-      ],
-      "country": "USA"
-    },
-    {
-      "id": "8109",
-      "name": "Kathryn Thornton",
-      "missions": [
-        "STS-61"
-      ],
-      "country": "USA"
     }
   ]
 }
